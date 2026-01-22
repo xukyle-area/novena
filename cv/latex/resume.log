@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.22)  22 JAN 2026 21:01
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.22)  22 JAN 2026 21:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -179,10 +179,10 @@ tter compatibility patches
 \cvcolumnautowidth=\skip73
 \bibindent=\skip74
 )
-(/usr/local/texlive/2025basic/texmf-dist/tex/latex/moderncv/moderncvstyleclassi
-c.sty
-Package: moderncvstyleclassic 2024-07-18 v2.4.1 modern curriculum vitae and let
-ter style scheme: classic
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/moderncv/moderncvstylecasual
+.sty
+Package: moderncvstylecasual 2024-07-18 v2.4.1 modern curriculum vitae and lett
+er style scheme: casual
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/moderncv/moderncviconssymbol
 s.sty
@@ -583,13 +583,15 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 raries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))))
-(/usr/local/texlive/2025basic/texmf-dist/tex/latex/moderncv/moderncvheadi.sty
-Package: moderncvheadi 2024-07-18 v2.4.1 modern curriculum vitae and letter hea
-der variant: 1
-\quotewidth=\skip75
-\makecvheadnamewidth=\skip76
-)
-(/usr/local/texlive/2025basic/texmf-dist/tex/latex/moderncv/moderncvbodyi.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/moderncv/moderncvheadii.sty
+Package: moderncvheadii 2024-07-18 v2.4.1 modern curriculum vitae and letter he
+ader variant: 2
+\makeheaddetailsbox=\box67
+\makeheaddetailstempbox=\box68
+\makeheaddetailswidth=\skip75
+\makeheaddetailsboxwidth=\skip76
+\quotewidth=\skip77
+) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/moderncv/moderncvbodyi.sty
 Package: moderncvbodyi 2024-07-18 v2.4.1 modern curriculum vitae and letter bod
 y variant: 1
 
@@ -599,16 +601,16 @@ Package: moderncvskillmatrix 2024-07-18 v2.4.1 modern curriculum vitae and lett
 er skill matrix
  (/usr/local/texlive/2025basic/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
-\multirow@colwidth=\skip77
+\multirow@colwidth=\skip78
 \multirow@cntb=\count307
-\multirow@dima=\skip78
+\multirow@dima=\skip79
 \bigstrutjot=\dimen257
 )
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/arydshln/arydshln.sty
 Package: arydshln 2019/02/21 v1.76 
 \dashlinedash=\dimen258
 \dashlinegap=\dimen259
-\adl@box=\box67
+\adl@box=\box69
 \adl@height=\dimen260
 \adl@heightsave=\dimen261
 \adl@depth=\dimen262
@@ -627,41 +629,49 @@ Package: arydshln 2019/02/21 v1.76
 \adl@everyvbox=\toks35
 \adl@LTpagetotal=\dimen265
 )
-\cvSkill@ShapeSize=\skip79
+\cvSkill@ShapeSize=\skip80
 \my@repeat@count=\count318
-\cvskill@width=\skip80
-\cvskill@descriptorwidth=\skip81
-\cvskill@experiencewidth=\skip82
-\skillmatrix@columnwidth=\skip83
-\skillmatrix@commentwidth=\skip84
-\skillmatrix@padding=\skip85
-\skillmatrix@hintscolumnwidth=\skip86
-\skillmatrix@bodylength=\skip87
-\cvskilllegend@leftdescriptorwidth=\skip88
-\cvskilllegend@rightdescriptorwidth=\skip89
-\skilllegend@hintscolumnwidth=\skip90
-\skilllegend@padding=\skip91
-\skilllegend@bodylength=\skip92
-\separatorrulewidth=\skip93
+\cvskill@width=\skip81
+\cvskill@descriptorwidth=\skip82
+\cvskill@experiencewidth=\skip83
+\skillmatrix@columnwidth=\skip84
+\skillmatrix@commentwidth=\skip85
+\skillmatrix@padding=\skip86
+\skillmatrix@hintscolumnwidth=\skip87
+\skillmatrix@bodylength=\skip88
+\cvskilllegend@leftdescriptorwidth=\skip89
+\cvskilllegend@rightdescriptorwidth=\skip90
+\skilllegend@hintscolumnwidth=\skip91
+\skilllegend@padding=\skip92
+\skilllegend@bodylength=\skip93
+\separatorrulewidth=\skip94
 )
-\hintscolumnwidth=\skip94
-\separatorcolumnwidth=\skip95
-\maincolumnwidth=\skip96
-\doubleitemcolumnwidth=\skip97
-\tripleitemcolumnwidth=\skip98
-\listitemsymbolwidth=\skip99
-\listitemcolumnwidth=\skip100
-\listdoubleitemcolumnwidth=\skip101
-\listitemsymbolspace=\skip102
-\baseletterheight=\skip103
-\cvitemwithcommentbox=\box68
-\cvitemwithcommentskilllength=\skip104
-\cvitemwithcommentcommentlength=\skip105
+\hintscolumnwidth=\skip95
+\separatorcolumnwidth=\skip96
+\maincolumnwidth=\skip97
+\doubleitemcolumnwidth=\skip98
+\tripleitemcolumnwidth=\skip99
+\listitemsymbolwidth=\skip100
+\listitemcolumnwidth=\skip101
+\listdoubleitemcolumnwidth=\skip102
+\listitemsymbolspace=\skip103
+\baseletterheight=\skip104
+\cvitemwithcommentbox=\box70
+\cvitemwithcommentskilllength=\skip105
+\cvitemwithcommentcommentlength=\skip106
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/moderncv/moderncvfooti.sty
+Package: moderncvfooti 2024-07-18 v2.4.1 modern curriculum vitae and letter foo
+ter variant: 1
+\footwidth=\skip107
+\footbox=\box71
+\foottempbox=\box72
+\footboxwidth=\skip108
 ))
-(/usr/local/texlive/2025basic/texmf-dist/tex/latex/moderncv/moderncvcolorblue.s
-ty
-Package: moderncvcolorblue 2024-07-18 v2.4.1 modern curriculum vitae and letter
- color scheme: blue
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/moderncv/moderncvcolororange
+.sty
+Package: moderncvcolororange 2024-07-18 v2.4.1 modern curriculum vitae and lett
+er color scheme: orange
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/moderncv/moderncvcolors.tex)
 ) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/geometry/geometry.sty
@@ -694,9 +704,9 @@ te.sty
 Package: xtemplate 2024-08-16 L3 Experimental prototype document functions
 )
 \l__xeCJK_tmp_int=\count322
-\l__xeCJK_tmp_box=\box69
+\l__xeCJK_tmp_box=\box73
 \l__xeCJK_tmp_dim=\dimen274
-\l__xeCJK_tmp_skip=\skip106
+\l__xeCJK_tmp_skip=\skip109
 \g__xeCJK_space_factor_int=\count323
 \l__xeCJK_begin_int=\count324
 \l__xeCJK_end_int=\count325
@@ -708,7 +718,7 @@ Package: xtemplate 2024-08-16 L3 Experimental prototype document functions
 \c__xeCJK_NormalSpace_class_int=\XeTeXcharclass6
 \c__xeCJK_CM_class_int=\XeTeXcharclass7
 \c__xeCJK_HangulJamo_class_int=\XeTeXcharclass8
-\l__xeCJK_last_skip=\skip107
+\l__xeCJK_last_skip=\skip110
 \c__xeCJK_none_node=\count326
 \g__xeCJK_node_int=\count327
 \c__xeCJK_CJK_node_dim=\dimen275
@@ -716,11 +726,11 @@ Package: xtemplate 2024-08-16 L3 Experimental prototype document functions
 \c__xeCJK_default_node_dim=\dimen277
 \c__xeCJK_CJK-widow_node_dim=\dimen278
 \c__xeCJK_normalspace_node_dim=\dimen279
-\c__xeCJK_default-space_node_skip=\skip108
-\l__xeCJK_ccglue_skip=\skip109
-\l__xeCJK_ecglue_skip=\skip110
-\l__xeCJK_punct_kern_skip=\skip111
-\l__xeCJK_indent_box=\box70
+\c__xeCJK_default-space_node_skip=\skip111
+\l__xeCJK_ccglue_skip=\skip112
+\l__xeCJK_ecglue_skip=\skip113
+\l__xeCJK_punct_kern_skip=\skip114
+\l__xeCJK_indent_box=\box74
 \l__xeCJK_last_penalty_int=\count328
 \l__xeCJK_last_bound_dim=\dimen280
 \l__xeCJK_last_kern_dim=\dimen281
@@ -752,7 +762,7 @@ LaTeX template Info: Declaring template type 'xeCJK/punctuation' taking 0
 \l__xeCJK_fam_int=\count331
 \g__xeCJK_fam_allocation_int=\count332
 \l__xeCJK_verb_case_int=\count333
-\l__xeCJK_verb_exspace_skip=\skip112
+\l__xeCJK_verb_exspace_skip=\skip115
  (/usr/local/texlive/2025basic/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
 File: xeCJK.cfg 2022/08/05 v3.9.1 Configuration file for xeCJK package
 ))
@@ -881,7 +891,7 @@ Package hyperref Info: Driver (autodetected): hxetex.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/hxetex.def
 File: hxetex.def 2024-11-05 v7.01l Hyperref driver for XeTeX
-\pdfm@box=\box71
+\pdfm@box=\box75
 \c@Hy@AnnotLevel=\count343
 \HyField@AnnotCount=\count344
 \Fld@listcount=\count345
@@ -902,7 +912,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip113
+\Hy@SectionHShift=\skip116
 )
 Package hyperref Info: Option `breaklinks' set `true' on input line 24.
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 24.
@@ -1012,15 +1022,15 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(5.97635pt, 585.55516pt, 5.97636pt)
-* v-part:(T,H,B)=(6.76181pt, 828.14229pt, 10.14275pt)
+* h-part:(L,W,R)=(2.9859pt, 591.53607pt, 2.9859pt)
+* v-part:(T,H,B)=(3.37833pt, 836.60101pt, 5.0675pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=585.55516pt
-* \textheight=828.14229pt
-* \oddsidemargin=-66.29364pt
-* \evensidemargin=-66.29364pt
-* \topmargin=-102.50818pt
+* \textwidth=591.53607pt
+* \textheight=836.60101pt
+* \oddsidemargin=-69.28409pt
+* \evensidemargin=-69.28409pt
+* \topmargin=-105.89166pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
@@ -1043,10 +1053,17 @@ Package hyperref Info: Link coloring OFF on input line 24.
 \@outlinefile=\write4
 \openout4 = `resume.out'.
 
-\pagenumberwidth=\skip114
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
+\pagenumberwidth=\skip117
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10.95> not available
 (Font)              Font shape `TU/lmss/m/sl' tried instead on input line 24.
-\makecvheaddetailsbox=\box72
+\makecvheadpicturebox=\box76
+\makecvheadpicturewidth=\skip118
+\makecvheadnamebox=\box77
+
+
+LaTeX Font Warning: Font shape `TU/PingFangSC(0)/m/sl' undefined
+(Font)              using `TU/PingFangSC(0)/m/n' instead on input line 26.
+
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-LatinModernRoma
 n.cfg
@@ -1054,9 +1071,11 @@ File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mod
 ern Roman (RS)
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 26.
+(Font)              <10.95> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 26.
+(Font)              <8> on input line 28.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 28.
  (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
@@ -1064,22 +1083,6 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonsta
 ndard glyph set (RS)
 )
-\makecvheadpicturebox=\box73
-\makecvheaddetailswidth=\skip115
-\makecvheadpicturewidth=\skip116
-\makecvheadnamebox=\box74
-
-
-LaTeX Font Warning: Font shape `TU/PingFangSC(0)/m/sl' undefined
-(Font)              using `TU/PingFangSC(0)/m/n' instead on input line 26.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 28.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 28.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 28.
-
 
 [1
 
@@ -1094,16 +1097,25 @@ L3 programming layer <2022/08/05>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `resume.out' has not changed.
-(rerunfilecheck)             Checksum: C09A1CC16C0A621E054FFE88A5C4AEFE;902.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `resume.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `resume.out':
+(rerunfilecheck)             Before: C09A1CC16C0A621E054FFE88A5C4AEFE;902
+(rerunfilecheck)             After:  6A43E357391FD0E0B943FD0AB0BC9834;778.
  ) 
 Here is how much of TeX's memory you used:
- 28411 strings out of 475366
- 597896 string characters out of 5762339
- 1089635 words of memory out of 5000000
- 50897 multiletter control sequences out of 15000+600000
- 563162 words of font info for 86 fonts, out of 8000000 for 9000
+ 28417 strings out of 475366
+ 597751 string characters out of 5762339
+ 1085427 words of memory out of 5000000
+ 50901 multiletter control sequences out of 15000+600000
+ 563138 words of font info for 83 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 129i,12n,129p,1003b,470s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 129i,13n,129p,1003b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on resume.pdf (2 pages).

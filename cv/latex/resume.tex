@@ -5,8 +5,8 @@
 \moderncvcolor{orange}    % 颜色选项：'blue', 'orange', 'green', 'red', 'purple', 'grey', 'black'
 
 % 页面边距调整
-\usepackage[scale=0.98]{geometry}
-\setlength{\hintscolumnwidth}{3cm}
+\usepackage[scale=0.99]{geometry}
+\setlength{\hintscolumnwidth}{2cm}
 
 % 中文支持（必须在最后加载）
 \usepackage{xeCJK}
@@ -38,7 +38,7 @@
 
 \section{核心项目经验}
 
-\subsection{\textbf{Flink 规则引擎系统}}
+\subsection{\Large\textbf{Flink 规则引擎系统}}
 
 \cvitem{项目背景}{构建统一的实时流处理平台，支持动态任务配置与规则引擎，服务多业务场景}
 
@@ -62,7 +62,7 @@
 \end{itemize}
 }
 
-\subsection{\textbf{Crypto 交易所实时行情系统}}
+\subsection{\Large\textbf{Crypto 交易所实时行情系统}}
 
 \cvitem{项目背景}{统一内部撮合引擎与外部交易所的行情数据，为交易、风控、前端提供实时行情服务}
 
@@ -86,31 +86,31 @@
 \end{itemize}
 }
 
-\subsection{\textbf{OTC 场外交易系统}}
+% \subsection{\Large\textbf{OTC 场外交易系统}}
 
-\cvitem{项目背景}{构建法币与加密货币的 OTC 交易系统，支持用户与 LP（流动性提供商）大额兑换}
+% \cvitem{项目背景}{构建法币与加密货币的 OTC 交易系统，支持用户与 LP（流动性提供商）大额兑换}
 
-\cvitem{技术栈}{Spring Boot、Redis、MySQL、XXL-Job、State Machine、Thrift、RateLimiter}
+% \cvitem{技术栈}{Spring Boot、Redis、MySQL、XXL-Job、State Machine、Thrift、RateLimiter}
 
-\cvitem{核心成果}{
-\begin{itemize}
-\item {价格管理}：自主维护订单簿，支持多 LP 接口与 Socket 双通道报价，聚合算法生成最优价格
-\item {订单状态机}：设计完整订单生命周期（报价→锁定→成交→结算→确认），覆盖资产锁定与资金划转
-\item {风控体系}：基于 Flink 实时计算用户风险评分，结合开户信息与交易行为进行多维度风控
-\item {Net 结算优化}：聚合未结算订单进行 Net 结算，减少划转次数，资金周转率提升 {70\%}
-\item {自动对账}：结合自动对账与补偿机制，保障资金安全与订单闭环
-\end{itemize}
-}
+% \cvitem{核心成果}{
+% \begin{itemize}
+% \item {价格管理}：自主维护订单簿，支持多 LP 接口与 Socket 双通道报价，聚合算法生成最优价格
+% \item {订单状态机}：设计完整订单生命周期（报价→锁定→成交→结算→确认），覆盖资产锁定与资金划转
+% \item {风控体系}：基于 Flink 实时计算用户风险评分，结合开户信息与交易行为进行多维度风控
+% \item {Net 结算优化}：聚合未结算订单进行 Net 结算，减少划转次数，资金周转率提升 {70\%}
+% \item {自动对账}：结合自动对账与补偿机制，保障资金安全与订单闭环
+% \end{itemize}
+% }
 
-\cvitem{技术亮点}{
-\begin{itemize}
-\item Spring State Machine 管理复杂订单状态流转
-\item 分布式锁（Redis + Redisson）保障资产锁定幂等性
-\item 基于 Flink CEP 的实时风控规则引擎
-\end{itemize}
-}
+% \cvitem{技术亮点}{
+% \begin{itemize}
+% \item Spring State Machine 管理复杂订单状态流转
+% \item 分布式锁（Redis + Redisson）保障资产锁定幂等性
+% \item 基于 Flink CEP 的实时风控规则引擎
+% \end{itemize}
+% }
 
-\subsection{\textbf{美团酒店分销商管理系统}}
+\subsection{\Large\textbf{美团酒店分销商管理系统}}
 
 \cvitem{项目背景}{面向全行业提供酒店门票分销服务，管理分销商全生命周期}
 
@@ -134,15 +134,15 @@
 
 \section{专业技能与能力}
 
-\cvitem{编程与框架}{精通 Java（集合、并发、JVM、GC 调优）、熟悉 Python、SQL；熟练使用 Spring Boot、Spring Cloud、MyBatis 等后端框架}
+\cvitem{编程与框架}{精通 Java 编程语言；熟练使用 Spring Boot、Spring Cloud、MyBatis 等后端框架}
 
-\cvitem{中间件与存储}{深度掌握 Flink 实时计算、Kafka 消息队列、Redis 缓存、MySQL 数据库、DynamoDB、Thrift RPC 等}
+\cvitem{中间件}{深度掌握 Kafka 消息队列、Redis 缓存、MySQL 数据库、DynamoDB、Thrift RPC 等}
 
 \cvitem{架构与运维}{具备微服务架构、高并发系统设计、DDD 领域建模、状态机设计能力；熟悉 Docker、Kubernetes、Prometheus、Grafana 等运维工具}
 
-\cvitem{实时计算与高并发架构}{深度掌握 Flink 流式计算，擅长设计万级并发、亚秒级延迟的分布式系统，熟悉多级缓存与限流架构}
+\cvitem{实时计算}{深度掌握 Flink 流式计算，擅长设计万级并发、亚秒级延迟的分布式系统，熟悉多级缓存与限流架构}
 
-\cvitem{复杂业务系统设计}{具备交易、结算、风控等金融系统全流程设计经验，擅长复杂业务抽象与状态机建模，能独立完成 0 到 1 架构设计}
+\cvitem{业务系统设计}{具备交易、结算、风控等金融系统全流程设计经验，擅长复杂业务抽象与状态机建模，能独立完成 0 到 1 架构设计}
 
 \cvitem{平台化基础设施}{构建可配置、可复用的规则引擎与任务调度平台，赋能业务快速迭代，任务上线周期从天级缩短至小时级}
 
