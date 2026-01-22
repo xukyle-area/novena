@@ -1,8 +1,8 @@
 %!TEX program = xelatex
-\documentclass[11pt,a4paper]{article}
+\documentclass[9pt,a4paper]{article}
 
 % 基础包
-\usepackage[left=1.5cm, right=1.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage[left=1.2cm, right=1.2cm, top=0.8cm, bottom=0.8cm]{geometry}
 \usepackage{xeCJK}
 \usepackage{enumitem}
 \usepackage{titlesec}
@@ -28,43 +28,44 @@
 % 段落设置
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
+\setlength{\lineskip}{0pt}
+\setlength{\baselineskip}{10pt}
 \pagestyle{empty}
 
 % 自定义命令
 \newcommand{\name}[1]{
     \begin{center}
-        {\Huge\bfseries\color{titlecolor} #1}
+        {\LARGE\bfseries\color{titlecolor} #1}
     \end{center}
-    \vspace{5pt}
+    \vspace{1pt}
 }
 
 \newcommand{\contactinfo}[4]{
     \begin{center}
-        #1 \quad | \quad #2 \quad | \quad #3 \quad | \quad #4
+        {\small #1 \quad | \quad #2 \quad | \quad #3 \quad | \quad #4}
     \end{center}
-    \vspace{10pt}
+    \vspace{3pt}
 }
 
 \newcommand{\sectiontitle}[1]{
-    \vspace{8pt}
-    {\Large\bfseries\color{sectioncolor} #1}
+    \vspace{3pt}
+    {\large\bfseries\color{sectioncolor} #1}
+    \vspace{1pt}
+    \hrule height 0.8pt
     \vspace{2pt}
-    \hrule height 1.5pt
-    \vspace{6pt}
 }
 
 \newcommand{\jobentry}[5]{
     \textbf{#1} \hfill \textit{#2}\\
     \textit{#3} \hfill #4\\
     #5
-    \vspace{6pt}
+    \vspace{2pt}
 }
 
 \newcommand{\projectentry}[3]{
-    \textbf{\large #1}\\
-    \textit{技术栈: #2}\\[3pt]
+    \textbf{#1}
     #3
-    \vspace{8pt}
+    \vspace{3pt}
 }
 
 \begin{document}
@@ -89,8 +90,6 @@
 \textbf{黑龙江大学} \hfill \textit{2016.09 - 2020.06}\\
 电子信息工程 本科
 
-\vspace{4pt}
-
 % 工作经历
 \sectiontitle{工作经历}
 
@@ -110,7 +109,8 @@
 \sectiontitle{核心项目经验}
 
 \projectentry{Flink 规则引擎系统}{Flink、Spring Boot、Kafka、Redis、MySQL、REST API}{
-\begin{itemize}[leftmargin=1.2em, itemsep=2pt, parsep=0pt, topsep=2pt]
+\begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \textbf{技术栈}: Flink、Spring Boot、Kafka、Redis、MySQL、REST API
     \item \textbf{项目背景}: 构建统一的实时流处理平台，支持动态任务配置与规则引擎，服务多业务场景
     \item \textbf{平台架构设计}: 构建多源数据接入架构，统一流式与批量任务处理，支持 Kafka、MQTT、WebSocket 等多种数据源
     \item \textbf{配置化管理}: 实现任务输入、逻辑、输出全链路配置化，支持业务方零代码快速上线新任务
@@ -122,7 +122,8 @@
 }
 
 \projectentry{Crypto 交易所实时行情系统}{Flink、Kafka、Redis、DynamoDB、WebSocket、MQTT、Thrift}{
-\begin{itemize}[leftmargin=1.2em, itemsep=2pt, parsep=0pt, topsep=2pt]
+\begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \textbf{技术栈}: Flink、Kafka、Redis、DynamoDB、WebSocket、MQTT、Thrift
     \item \textbf{项目背景}: 统一内部撮合引擎与外部交易所的行情数据，为交易、风控、前端提供实时行情服务
     \item \textbf{内部行情流}: 对接撮合引擎，基于 Flink 实现窗口聚合与 K 线生成（1s/1m/5m/1h/1d），结果 sink 至 Kafka
     \item \textbf{外部行情聚合}: WebSocket 实时订阅 Binance、Crypto.com 等主流交易所，缓存与持久化
@@ -134,7 +135,8 @@
 }
 
 \projectentry{美团酒店分销商管理系统}{Spring、Redis、MySQL、XXL-Job、Thrift、State Machine、Guava Cache、MyBatis}{
-\begin{itemize}[leftmargin=1.2em, itemsep=2pt, parsep=0pt, topsep=2pt]
+\begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \textbf{技术栈}: Spring、Redis、MySQL、XXL-Job、Thrift、State Machine、Guava Cache、MyBatis
     \item \textbf{项目背景}: 面向全行业提供酒店门票分销服务，管理分销商全生命周期
     \item \textbf{接口限流系统}: 基于 Redis + Guava Cache 实现按商家维度的流量限制，防止恶意请求与系统过载
     \item \textbf{签名校验与鉴权}: Redis 存储签名信息，结合 Guava Cache 提高校验效率，QPS 提升 \textbf{3 倍}
@@ -147,7 +149,7 @@
 % 专业技能
 \sectiontitle{专业技能与能力}
 
-\begin{itemize}[leftmargin=1.2em, itemsep=3pt, parsep=0pt, topsep=2pt]
+\begin{itemize}[leftmargin=0.8em, itemsep=3pt, parsep=0pt, topsep=0pt]
     \item \textbf{编程与框架}: 精通 Java 编程语言；熟练使用 Spring Boot、Spring Cloud、MyBatis 等后端框架
     \item \textbf{中间件}: 深度掌握 Kafka 消息队列、Redis 缓存、MySQL 数据库、DynamoDB、Thrift RPC 等
     \item \textbf{实时计算}: 深度掌握 Flink 流式计算，擅长设计万级并发、亚秒级延迟的分布式系统
