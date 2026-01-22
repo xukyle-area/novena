@@ -56,6 +56,7 @@
 }
 
 \newcommand{\jobentry}[5]{
+    \vspace{3pt}
     \textbf{#1} \hfill #2\\
     #3 \hfill #4\\
     #5
@@ -63,8 +64,9 @@
 }
 
 \newcommand{\projectentry}[3]{
-    \textbf{#1}
-    \vspace{0pt}
+    \vspace{3pt}
+    {\large\textbf{#1}}
+    \vspace{1pt}
     {\small\textit{#2}}
     \vspace{2pt}
     #3
@@ -84,7 +86,7 @@
 }{
     \href{https://linkedin.com/in/xu-kyle}{linkedin.com/in/xu-kyle}
 }{
-    高级后端开发工程师 | 6年经验
+    高级后端开发工程师( 6 年工作经验)
 }
 
 % 教育经历
@@ -111,50 +113,46 @@
 % 核心项目经验
 \sectiontitle{核心项目经验}
 
-\projectentry{Flink 规则引擎系统}{Flink、Spring Boot、Kafka、Redis、MySQL、REST API}{
+\projectentry{规则引擎系统}{Flink, Spring Boot, Kafka, Redis, MySQL, REST API}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
-    \item \textbf{项目背景}: 构建统一的实时流处理平台，支持动态任务配置与规则引擎，服务多业务场景
-    \item \textbf{平台架构设计}: 构建多源数据接入架构，统一流式与批量任务处理，支持 Kafka、MQTT、WebSocket 等多种数据源
-    \item \textbf{配置化管理}: 实现任务输入、逻辑、输出全链路配置化，支持业务方零代码快速上线新任务
-    \item \textbf{动态规则引擎}: 支持 Flink SQL 规则动态提交、在线编辑与热加载，规则加载时间缩短 \textbf{60\%}
-    \item \textbf{统一 API 体系}: 提供任务触发、监控、告警的 REST API，支持自动化运维
-    \item \textbf{效率提升}: 任务上线周期从 \textbf{1 天降至 1 小时}，支撑多业务线实时计算需求
-    \item \textbf{技术亮点}: Flink 状态管理与 Checkpoint 机制保障 exactly-once 语义；基于 Spring Boot + Flink 的任务动态提交与生命周期管理
+    \item \textbf{项目背景}: 构建统一的处理平台，支持动态任务配置与规则引擎，服务多业务场景。
+    \item \textbf{平台架构设计}: 构建多源数据接入架构，统一流式与批量任务处理，支持 Kafka, MySQL 作为数据源。
+    \item \textbf{配置化管理}: 实现从数据源输入，到处理逻辑，再到输出，全链路配置化，支持业务方零代码快速上线新任务。
+    \item \textbf{动态规则引擎}: 支持 Flink SQL 规则动态提交, 在线编辑与热加载，规则加载时间缩短 \textbf{90\%}。
+    \item \textbf{效率提升}: 任务上线周期从 \textbf{1 天降至 1 小时}，支撑多业务线实时计算需求。
 \end{itemize}
 }
 
-\projectentry{Crypto 交易所实时行情系统}{Flink、Kafka、Redis、DynamoDB、WebSocket、MQTT、Thrift}{
+\projectentry{交易所行情系统}{Flink, Kafka, Redis, DynamoDB, WebSocket, MQTT, Thrift}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
-    \item \textbf{项目背景}: 统一内部撮合引擎与外部交易所的行情数据，为交易、风控、前端提供实时行情服务
-    \item \textbf{内部行情流}: 对接撮合引擎，基于 Flink 实现窗口聚合与 K 线生成（1s/1m/5m/1h/1d），结果 sink 至 Kafka
-    \item \textbf{外部行情聚合}: WebSocket 实时订阅 Binance、Crypto.com 等主流交易所，缓存与持久化
-    \item \textbf{低延迟推送}: 通过 MQTT 协议实时推送行情，延迟降至 \textbf{< 500ms}，支撑 \textbf{万级并发}
-    \item \textbf{分层存储}: Redis 热数据缓存 + DynamoDB 历史数据持久化，支持监管报送
-    \item \textbf{风控监控}: 实时监控价格剧烈波动、异常大单、流动性枯竭，触发预警并自动切换备用数据源
-    \item \textbf{技术亮点}: Flink 滑动窗口聚合实现 K 线实时计算；分层缓存策略（L1: Guava Cache / L2: Redis）提升读性能
+    \item \textbf{项目背景}: 构建统一的行情数据平台，整合内部撮合引擎与外部交易所行情，为交易、风控和前端提供实时数据服务。
+    \item \textbf{内部行情计算}: 对接撮合引擎的成交流，基于 Flink 滑动窗口实现 K 线实时计算，支持深度、成交量等指标聚合。
+    \item \textbf{低延迟推送}: 基于 MQTT 协议实现行情实时推送，端到端延迟 \textbf{< 500ms}，支撑 \textbf{万级并发订阅}。
+    \item \textbf{外部行情接入}: 通过 WebSocket 实时订阅 Binance、Crypto.com 等主流交易所行情，实现数据标准化与缓存。
+    \item \textbf{分层存储}: Redis 存储热数据 + DynamoDB 持久化历史行情，满足实时查询与监管报送需求。
+    \item \textbf{风控监控}: 实时监控价格异常波动、大额成交、流动性枯竭等风险事件，触发预警并自动切换备用数据源。
+    \item \textbf{技术亮点}: Flink 滑动窗口聚合与水位线机制保障数据一致性；多级缓存架构（Guava Cache + Redis）提高系统并发量。
 \end{itemize}
 }
 
-\projectentry{美团酒店分销商管理系统}{Spring、Redis、MySQL、XXL-Job、Thrift、State Machine、Guava Cache、MyBatis}{
+\projectentry{OTC 场外交易系统}{Spring Boot, Redis, MySQL, XXL-Job, State Machine, Thrift, RateLimiter}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
-    \item \textbf{项目背景}: 面向全行业提供酒店门票分销服务，管理分销商全生命周期
-    \item \textbf{接口限流系统}: 基于 Redis + Guava Cache 实现按商家维度的流量限制，防止恶意请求与系统过载
-    \item \textbf{签名校验与鉴权}: Redis 存储签名信息，结合 Guava Cache 提高校验效率，QPS 提升 \textbf{3 倍}
-    \item \textbf{生命周期管理}: State Machine 管理分销商状态流转（申请→审核→生效→暂停→下线），防止非法状态转换
-    \item \textbf{商家画像与成本分析}: 处理商家打点信息，构建画像体系，支撑精准运营
-    \item \textbf{技术亮点}: 滑动窗口限流算法（Redis + Lua 脚本）；多级缓存架构（Guava Cache + Redis）降低 DB 压力
+    \item \textbf{项目背景}: 构建法币与加密货币的 OTC 交易系统，支持用户与 LP（流动性提供商）大额兑换。
+    \item \textbf{价格管理}: 自主维护订单簿，支持多 LP 接口与 Socket 双通道报价，聚合算法生成最优价格。
+    \item \textbf{订单状态机}: 设计完整订单生命周期（报价→锁定→成交→结算→确认），覆盖资产锁定与资金划转。
+    \item \textbf{风控体系}: 基于 Flink 实时计算用户风险评分，结合开户信息与交易行为进行多维度风控。
+    \item \textbf{Net 结算优化}: 聚合未结算订单进行 Net 结算，减少划转次数，资金周转率提升 \textbf{70\%}。
 \end{itemize}
 }
 
-\projectentry{OTC 场外交易系统}{Spring Boot、Redis、MySQL、XXL-Job、State Machine、Thrift、RateLimiter}{
+\projectentry{分销商管理系统（CRM）}{Spring, Redis, MySQL, XXL-Job, Thrift, State Machine, Guava Cache, MyBatis}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
-    \item \textbf{项目背景}: 构建法币与加密货币的 OTC 交易系统，支持用户与 LP（流动性提供商）大额兑换
-    \item \textbf{价格管理}: 自主维护订单簿，支持多 LP 接口与 Socket 双通道报价，聚合算法生成最优价格
-    \item \textbf{订单状态机}: 设计完整订单生命周期（报价→锁定→成交→结算→确认），覆盖资产锁定与资金划转
-    \item \textbf{风控体系}: 基于 Flink 实时计算用户风险评分，结合开户信息与交易行为进行多维度风控
-    \item \textbf{Net 结算优化}: 聚合未结算订单进行 Net 结算，减少划转次数，资金周转率提升 \textbf{70\%}
-    \item \textbf{自动对账}: 结合自动对账与补偿机制，保障资金安全与订单闭环
-    \item \textbf{技术亮点}: Spring State Machine 管理复杂订单状态流转；分布式锁（Redis + Redisson）保障资产锁定幂等性；基于 Flink CEP 的实时风控规则引擎
+    \item \textbf{项目背景}: 面向全行业提供酒店门票分销服务，管理分销商全生命周期。
+    \item \textbf{接口限流系统}: 基于 Redis + Guava Cache 实现按商家维度的流量限制，防止恶意请求与系统过载。
+    \item \textbf{签名校验与鉴权}: Redis 存储签名信息，结合 Guava Cache 提高校验效率，QPS 提升 \textbf{3 倍}。
+    \item \textbf{生命周期管理}: State Machine 管理分销商状态流转（申请→审核→生效→暂停→下线），防止非法状态转换。
+    \item \textbf{商家画像与成本分析}: 处理商家打点信息，构建画像体系，支撑精准运营。
+    \item \textbf{接口限流}: 滑动窗口限流算法（Redis + Lua 脚本）；多级缓存架构（Guava Cache + Redis）降低 database 压力。
 \end{itemize}
 }
 
@@ -162,12 +160,11 @@
 \sectiontitle{专业技能与能力}
 
 \begin{itemize}[leftmargin=0.8em, itemsep=3pt, parsep=0pt, topsep=0pt]
-    \item \textbf{编程与框架}: 精通 Java 编程语言；熟练使用 Spring Boot、Spring Cloud、MyBatis 等后端框架
-    \item \textbf{中间件}: 深度掌握 Kafka 消息队列、Redis 缓存、MySQL 数据库、DynamoDB、Thrift RPC 等
-    \item \textbf{实时计算}: 深度掌握 Flink 流式计算，擅长设计万级并发、亚秒级延迟的分布式系统
-    \item \textbf{架构设计}: 具备微服务架构、高并发系统设计、DDD 领域建模、状态机设计能力
-    \item \textbf{运维工具}: 熟悉 Docker、Kubernetes、Prometheus、Grafana 等运维工具
-    \item \textbf{业务能力}: 具备交易、结算、风控等金融系统全流程设计经验，能独立完成 0 到 1 架构设计
+    \item \textbf{编程与框架}: 精通 Java 编程语言；熟练使用 Spring Boot, Spring Cloud, MyBatis 等后端框架
+    \item \textbf{中间件与存储}: 深度掌握 Flink 实时计算、Kafka 消息队列、Redis 缓存、MySQL 数据库、DynamoDB 等
+    \item \textbf{架构设计}: 具备微服务架构, 高并发系统设计, DDD 领域建模, 状态机设计能力
+    \item \textbf{运维工具}: 熟悉 Docker, Kubernetes, Prometheus, Grafana 等运维工具
+    \item \textbf{业务系统设计}: 具备交易、行情、风控等金融系统全流程设计经验，能独立完成 0 到 1 系统架构设计
 \end{itemize}
 
 \end{document}
