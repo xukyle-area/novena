@@ -5,7 +5,7 @@
 \moderncvcolor{blue}    % 颜色选项：'blue', 'orange', 'green', 'red', 'purple', 'grey', 'black'
 
 % 页面边距调整
-\usepackage[scale=0.85]{geometry}
+\usepackage[scale=0.98]{geometry}
 \setlength{\hintscolumnwidth}{3cm}
 
 % 中文支持（必须在最后加载）
@@ -17,10 +17,9 @@
 
 % 个人信息
 \name{徐}{中建}
-\title{高级后端开发工程师 | 6年经验 | 专注金融交易系统与实时计算}
+\title{高级后端开发工程师 | 6年经验}
 \email{zjxu97@gmail.com}
 \phone[mobile]{+86 18971672214}
-\social[linkedin]{xu-kyle}
 
 \begin{document}
 
@@ -39,7 +38,7 @@
 
 \section{核心项目经验}
 
-\subsection{Flink 规则引擎系统}
+\subsection{\textbf{Flink 规则引擎系统}}
 
 \cvitem{项目背景}{构建统一的实时流处理平台，支持动态任务配置与规则引擎，服务多业务场景}
 
@@ -47,11 +46,11 @@
 
 \cvitem{核心成果}{
 \begin{itemize}
-\item \textbf{平台架构设计}：构建多源数据接入架构，统一流式与批量任务处理，支持 Kafka、MQTT、WebSocket 等多种数据源
-\item \textbf{配置化管理}：实现任务输入、逻辑、输出全链路配置化，支持业务方零代码快速上线新任务
-\item \textbf{动态规则引擎}：支持 Flink SQL 规则动态提交、在线编辑与热加载，规则加载时间缩短 \textbf{60\%}
-\item \textbf{统一 API 体系}：提供任务触发、监控、告警的 REST API，支持自动化运维
-\item \textbf{效率提升}：任务上线周期从 \textbf{1 天降至 1 小时}，支撑多业务线实时计算需求
+\item {平台架构设计}：构建多源数据接入架构，统一流式与批量任务处理，支持 Kafka、MQTT、WebSocket 等多种数据源
+\item {配置化管理}：实现任务输入、逻辑、输出全链路配置化，支持业务方零代码快速上线新任务
+\item {动态规则引擎}：支持 Flink SQL 规则动态提交、在线编辑与热加载，规则加载时间缩短 {60\%}
+\item {统一 API 体系}：提供任务触发、监控、告警的 REST API，支持自动化运维
+\item {效率提升}：任务上线周期从 {1 天降至 1 小时}，支撑多业务线实时计算需求
 \end{itemize}
 }
 
@@ -63,7 +62,7 @@
 \end{itemize}
 }
 
-\subsection{Crypto 交易所实时行情系统}
+\subsection{\textbf{Crypto 交易所实时行情系统}}
 
 \cvitem{项目背景}{统一内部撮合引擎与外部交易所的行情数据，为交易、风控、前端提供实时行情服务}
 
@@ -71,11 +70,11 @@
 
 \cvitem{核心成果}{
 \begin{itemize}
-\item \textbf{内部行情流}：对接撮合引擎，基于 Flink 实现窗口聚合与 K 线生成（1s/1m/5m/1h/1d），结果 sink 至 Kafka
-\item \textbf{外部行情聚合}：WebSocket 实时订阅 Binance、Crypto.com 等主流交易所，缓存与持久化
-\item \textbf{低延迟推送}：通过 MQTT 协议实时推送行情，延迟降至 \textbf{< 500ms}，支撑 \textbf{万级并发}
-\item \textbf{分层存储}：Redis 热数据缓存 + DynamoDB 历史数据持久化，支持监管报送
-\item \textbf{风控监控}：实时监控价格剧烈波动、异常大单、流动性枯竭，触发预警并自动切换备用数据源
+\item {内部行情流}：对接撮合引擎，基于 Flink 实现窗口聚合与 K 线生成（1s/1m/5m/1h/1d），结果 sink 至 Kafka
+\item {外部行情聚合}：WebSocket 实时订阅 Binance、Crypto.com 等主流交易所，缓存与持久化
+\item {低延迟推送}：通过 MQTT 协议实时推送行情，延迟降至 {< 500ms}，支撑 {万级并发}
+\item {分层存储}：Redis 热数据缓存 + DynamoDB 历史数据持久化，支持监管报送
+\item {风控监控}：实时监控价格剧烈波动、异常大单、流动性枯竭，触发预警并自动切换备用数据源
 \end{itemize}
 }
 
@@ -87,7 +86,7 @@
 \end{itemize}
 }
 
-\subsection{OTC 场外交易系统}
+\subsection{\textbf{OTC 场外交易系统}}
 
 \cvitem{项目背景}{构建法币与加密货币的 OTC 交易系统，支持用户与 LP（流动性提供商）大额兑换}
 
@@ -95,11 +94,11 @@
 
 \cvitem{核心成果}{
 \begin{itemize}
-\item \textbf{价格管理}：自主维护订单簿，支持多 LP 接口与 Socket 双通道报价，聚合算法生成最优价格
-\item \textbf{订单状态机}：设计完整订单生命周期（报价→锁定→成交→结算→确认），覆盖资产锁定与资金划转
-\item \textbf{风控体系}：基于 Flink 实时计算用户风险评分，结合开户信息与交易行为进行多维度风控
-\item \textbf{Net 结算优化}：聚合未结算订单进行 Net 结算，减少划转次数，资金周转率提升 \textbf{70\%}
-\item \textbf{自动对账}：结合自动对账与补偿机制，保障资金安全与订单闭环
+\item {价格管理}：自主维护订单簿，支持多 LP 接口与 Socket 双通道报价，聚合算法生成最优价格
+\item {订单状态机}：设计完整订单生命周期（报价→锁定→成交→结算→确认），覆盖资产锁定与资金划转
+\item {风控体系}：基于 Flink 实时计算用户风险评分，结合开户信息与交易行为进行多维度风控
+\item {Net 结算优化}：聚合未结算订单进行 Net 结算，减少划转次数，资金周转率提升 {70\%}
+\item {自动对账}：结合自动对账与补偿机制，保障资金安全与订单闭环
 \end{itemize}
 }
 
@@ -111,7 +110,7 @@
 \end{itemize}
 }
 
-\subsection{美团酒店分销商管理系统}
+\subsection{\textbf{美团酒店分销商管理系统}}
 
 \cvitem{项目背景}{面向全行业提供酒店门票分销服务，管理分销商全生命周期}
 
@@ -119,10 +118,10 @@
 
 \cvitem{核心成果}{
 \begin{itemize}
-\item \textbf{接口限流系统}：基于 Redis + Guava Cache 实现按商家维度的流量限制，防止恶意请求与系统过载
-\item \textbf{签名校验与鉴权}：Redis 存储签名信息，结合 Guava Cache 提高校验效率，QPS 提升 \textbf{3 倍}
-\item \textbf{生命周期管理}：State Machine 管理分销商状态流转（申请→审核→生效→暂停→下线），防止非法状态转换
-\item \textbf{商家画像与成本分析}：处理商家打点信息，构建画像体系，支撑精准运营
+\item {接口限流系统}：基于 Redis + Guava Cache 实现按商家维度的流量限制，防止恶意请求与系统过载
+\item {签名校验与鉴权}：Redis 存储签名信息，结合 Guava Cache 提高校验效率，QPS 提升 {3 倍}
+\item {生命周期管理}：State Machine 管理分销商状态流转（申请→审核→生效→暂停→下线），防止非法状态转换
+\item {商家画像与成本分析}：处理商家打点信息，构建画像体系，支撑精准运营
 \end{itemize}
 }
 
