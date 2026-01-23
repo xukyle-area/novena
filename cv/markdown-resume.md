@@ -94,7 +94,7 @@ zjxu97@gmail.com | +86 18971672214 | [LinkedIn](https://linkedin.com/in/xu-kyle)
 
 ## 专业技能与能力
 
-**编程与框架**：精通 Java（集合、并发、JVM、GC 调优）、熟悉 Python、SQL；熟练使用 Spring Boot、Spring Cloud、MyBatis 等后端框架
+**编程与框架**：精通 Java 、熟悉 Python、SQL；熟练使用 Spring Boot、MyBatis 等后端框架
 **中间件与存储**：深度掌握 Flink 实时计算、Kafka 消息队列、Redis 缓存、MySQL 数据库、DynamoDB、Thrift RPC 等
 **架构与运维**：具备微服务架构、高并发系统设计、DDD 领域建模、状态机设计能力；熟悉 Docker、Kubernetes、Prometheus、Grafana 等运维工具
 **实时计算与高并发架构**：深度掌握 Flink 流式计算，擅长设计万级并发、亚秒级延迟的分布式系统，熟悉多级缓存与限流架构

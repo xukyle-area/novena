@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.22)  23 JAN 2026 02:27
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2026.1.22)  23 JAN 2026 11:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**resume_native.tex
-(./resume_native.tex
+**kyle_resume.tex
+(./kyle_resume.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/article.cls
@@ -359,8 +359,8 @@ Package fontspec Info:
 (fontspec)             SC/BI/OT:script=hani;language=dflt;"
 
 Package hyperref Info: Option `colorlinks' set `true' on input line 26.
- (./resume_native.aux)
-\openout1 = `resume_native.aux'.
+ (./kyle_resume.aux)
+\openout1 = `kyle_resume.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
 LaTeX Font Info:    ... okay on input line 76.
@@ -476,29 +476,29 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 76.
 Package hyperref Info: Link coloring ON on input line 76.
-(./resume_native.out) (./resume_native.out)
+(./kyle_resume.out) (./kyle_resume.out)
 \@outlinefile=\write3
-\openout3 = `resume_native.out'.
+\openout3 = `kyle_resume.out'.
 
 
 
 [1
 
-] (./resume_native.aux)
+] (./kyle_resume.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
-Package rerunfilecheck Info: File `resume_native.out' has not changed.
+Package rerunfilecheck Info: File `kyle_resume.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
  13334 strings out of 475366
- 286272 string characters out of 5762339
- 779829 words of memory out of 5000000
+ 286234 string characters out of 5762339
+ 785819 words of memory out of 5000000
  36186 multiletter control sequences out of 15000+600000
  559907 words of font info for 58 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 74i,5n,92p,300b,326s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,5n,92p,298b,326s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on resume_native.pdf (1 page).
+Output written on kyle_resume.pdf (1 page).
