@@ -22,11 +22,11 @@
 | 18   | acquire             | 获得       | associate      | 关联       | restore         | 恢复         |
 | 19   | efficiently         | 有效地     | minimum        | 最小       | maximum         | 最大         |
 | 20   | additional overhead | 额外开销   | prosperity     | 繁荣       | soar            | 翱翔、飞涨   |
-| 21   |                     |            |                |            |                 |              |
-|      |                     |            |                |            |                 |              |
-|      |                     |            |                |            |                 |              |
-|      |                     |            |                |            |                 |              |
-|      |                     |            |                |            |                 |              |
+| 21   | proposition         | 主张       |                |            |                 |              |
+| 22   | architect           | 构建       | architecture   | 建筑学     | architectural   | 建筑学的     |
+| 23   | config              | 配置       | configuration  | 配置       | configure       | 配置、设置   |
+| 24   | configurable        | 可配置的   |                |            |                 |              |
+| 25   | scenario            | 场景       |                |            |                 |              |
 |      |                     |            |                |            |                 |              |
 |      |                     |            |                |            |                 |              |
 |      |                     |            |                |            |                 |              |
