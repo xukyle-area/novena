@@ -4,37 +4,38 @@
 
 ### **Version A: Concise (60 seconds)**
 ```
-"I architected a configurable real-time stream processing platform using Apache Flink 
-at YAX Exchange. The core value proposition was enabling business teams to deploy new 
-streaming tasks without writing code.
+"I architected a unified stream and batch processing platform using Apache Flink 
+at YAX Exchange. The core value proposition was enabling business teams to deploy 
+both real-time streaming and batch tasks without writing code.
 
-Previously, launching a new real-time task required developers to write Flink jobs, 
-test, and deploy, which took about one day. We built a rule engine that allows users 
-to configure data sources, processing logic, and outputs through a web interface.
+Previously, launching a new task required developers to write Flink jobs, test, 
+and deploy, which took about two days. We built a configurable rule engine that 
+allows users to define data sources, processing logic, and outputs through a web interface.
 
-The platform reduced deployment time from one day to one hour, and rule loading time 
-improved by 60%. It now supports multiple business scenarios including risk monitoring, 
-trading alerts, and market data aggregation across our trading platform."
+The platform reduced deployment time from one day to one hour, and cut rule loading 
+time by 60%. Now it supports critical compliance scenarios including ongoing CDD, 
+dynamic KYC updates, and real-time transaction risk control."
 ```
 
 ### **Version B: Impact-focused (90 seconds)**
 ```
-"At YAX Exchange, I led the development of a unified stream processing platform that 
-became the backbone for all real-time computation needs across the company.
+"At YAX Exchange, I led the development of a unified stream and batch processing platform 
+that became the backbone for all real-time and scheduled computation needs across the company.
 
-The business challenge was this: different teams needed various real-time features - 
-risk alerts, trading signals, market monitoring - but our existing approach required 
-dedicated engineering effort for each new requirement. This created a bottleneck.
+The business challenge was this: different teams needed various data processing features - 
+real-time risk alerts, daily compliance reports, trading signals, market monitoring - but 
+our existing approach required dedicated engineering effort for each new requirement. 
+This created a bottleneck.
 
 My solution was a configurable Flink-based rule engine. We abstracted the common 
-patterns into three components: input adapters for various data sources like Kafka 
-and WebSocket, a rule engine supporting Flink SQL and CEP patterns, and flexible 
-output sinks.
+patterns into three components: unified input adapters for both streaming sources 
+(Kafka, WebSocket) and batch sources (MySQL, file systems), a rule engine supporting 
+Flink SQL and CEP patterns for both stream and batch processing, and flexible output sinks.
 
 The results were significant: task deployment went from one day to one hour, we 
 eliminated the engineering bottleneck, and business teams gained self-service 
-capability. The platform now handles millions of events per second across multiple 
-business lines."
+capability. The platform now handles millions of streaming events per second and 
+processes daily batch jobs across multiple business lines."
 ```
 
 ---
@@ -48,15 +49,17 @@ business lines."
 TIER 1 - Configuration Layer:
 We built a Spring Boot REST API that serves as the control plane. Business users 
 configure tasks through this API, defining:
-- Data sources: Kafka topics, MQTT endpoints, or WebSocket connections
-- Processing rules: either Flink SQL queries or CEP patterns  
+- Data sources: streaming (Kafka topics, MQTT, WebSocket) or batch (MySQL, HDFS, S3)
+- Processing mode: real-time streaming or scheduled batch execution
+- Processing rules: Flink SQL queries or CEP patterns for both stream and batch
 - Output destinations: Kafka, MySQL, Redis, or REST callbacks
 
 These configurations are stored in MySQL with versioning support for rollback capability.
 
 TIER 2 - Job Management Layer:
 This is the core orchestration component. When a user submits a task configuration, 
-our job manager dynamically generates a Flink DataStream job using the Table API. 
+our job manager dynamically generates either a Flink DataStream job (for streaming) 
+or a Flink batch job (for scheduled processing) using the Table API and DataStream API. 
 We use Flink's REST API to submit jobs programmatically to the cluster.
 
 The key innovation here is dynamic rule loading. Instead of restarting the entire 
@@ -111,20 +114,27 @@ protocol. This ensures that results are committed to Kafka atomically with the
 checkpoint, preventing duplicate output."
 ```
 
-#### **Challenge 3: Multi-Source Data Ingestion**
+#### **Challenge 3: Unified Stream and Batch Data Ingestion**
 ```
-"The platform needs to consume from heterogeneous data sources: Kafka, MQTT for IoT 
-devices, and WebSocket for external exchange feeds.
+"The platform needs to consume from heterogeneous data sources: both streaming sources 
+(Kafka, MQTT, WebSocket) and batch sources (MySQL, HDFS, file systems).
 
-We built a unified Source abstraction implementing Flink's SourceFunction interface. 
-Each source type has an adapter:
+We built a unified Source abstraction supporting both streaming and batch modes:
+
+Streaming sources:
 - Kafka: Uses FlinkKafkaConsumer with exactly-once semantics
 - MQTT: Custom source with manual offset tracking in state
 - WebSocket: Async source with reconnection logic and heartbeat monitoring
 
-All sources emit a common Event object with standardized schema. This allows the 
-downstream processing logic to be source-agnostic. We use Avro for serialization 
-to ensure schema evolution compatibility."
+Batch sources:
+- MySQL: JDBC input format with parallel partitioning for large tables
+- HDFS/S3: File-based source with support for various formats (Parquet, CSV, JSON)
+- Scheduled execution via Cron expressions for daily/hourly batch jobs
+
+All sources emit a common Event object with standardized schema. This unified 
+abstraction allows the downstream processing logic to be source-agnostic, whether 
+processing streams or batches. We use Avro for serialization to ensure schema 
+evolution compatibility."
 ```
 
 ---
