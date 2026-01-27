@@ -12,7 +12,7 @@ Previously, launching a new task required developers to write Flink jobs, test,
 and deploy, which took about two days. We built a configurable rule engine that 
 allows users to define data sources, processing logic, and outputs through a web interface.
 
-The platform reduced deployment time from one day to one hour, and cut rule loading 
+The platform reduced deployment time from two days to one hour, and cut rule loading 
 time by 60%. Now it supports critical compliance scenarios including ongoing CDD, 
 dynamic KYC updates, and real-time transaction risk control."
 ```
