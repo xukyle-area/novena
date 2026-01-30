@@ -112,13 +112,13 @@
 % 核心项目经验
 \sectiontitle{核心项目经验}
 
-\projectentry{规则引擎 \textit{@老虎证券}}{Flink, Spring Boot, Kafka, Redis, MySQL, REST API}{
+\projectentry{分布式风控决策平台 \textit{@老虎证券}}{Java, Flink, Spring Cloud, Kafka, Redis, MySQL, Docker, K8s}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
-    \item \textbf{项目背景}: 构建统一的处理平台，支持动态任务配置与规则引擎，支持\textbf{风控、开户、KYC} 等多业务场景。
-    \item \textbf{平台架构设计}: 构建多源数据接入架构，统一流式与批量任务处理，支持 Kafka, MySQL 作为数据源。
-    \item \textbf{配置化管理}: 实现从数据源输入，到处理逻辑，再到输出，全链路配置化，支持业务方零代码快速上线新任务。
-    \item \textbf{动态规则引擎}: 支持 Flink SQL 规则动态提交, 在线编辑与热加载，规则加载时间缩短 \textbf{90\%}。
-    \item \textbf{效率提升}: 任务上线周期从 1 天降至 1 小时，支撑多业务线实时计算需求。
+    \item \textbf{系统架构设计与技术攻坚}：主导从 0 到 1 规划分布式风控系统技术架构，完成规则引擎、实时计算框架、数据存储等核心技术选型，设计高并发、低延迟的决策平台。
+    \item \textbf{基础设施建设}：搭建实时特征计算引擎、动态规则管理系统、风险画像平台与多策略决策工作流，支撑多业务场景的风险拦截。
+    \item \textbf{数据体系与模型工程化}：构建风控专用数据仓库，设计实时/离线特征加工流水线，实现数据采集、清洗、存储到特征服务的全链路闭环。推动机器学习模型与规则策略融合，开发自动化模型部署与 AB 测试框架。
+    \item \textbf{系统落地与性能优化}：主导核心模块编码，解决高并发流量下的性能瓶颈，系统可用性达 99.99\%。建立监控报警体系与容灾方案，实现风险拦截与系统稳定性的双重保障。
+    \item \textbf{跨领域协同与标准化}：推动风控系统与支付、交易、用户中心等业务系统无缝集成，制定 API 接口规范与数据对接标准，沉淀系统建设方法论，培养团队风控技术能力。
 \end{itemize}
 }
 
@@ -159,12 +159,12 @@
 \sectiontitle{专业技能与能力}
 
 \begin{itemize}[leftmargin=0.8em, itemsep=3pt, parsep=0pt, topsep=0pt]
-    \item \textbf{编程与框架}: 精通 Java、熟悉 Python、SQL；熟练使用 Spring Boot、MyBatis 等后端框架。
-    \item \textbf{中间件与存储}: 深度掌握 Flink 实时计算、Kafka 消息队列、Redis 缓存、MySQL 数据库、DynamoDB、Thrift RPC 等。
-    \item \textbf{架构与运维}: 具备微服务架构、高并发系统设计、DDD 领域建模、状态机设计能力；熟悉 Docker、Kubernetes、Prometheus、Grafana 等运维工具。
-    \item \textbf{实时计算与高并发架构}: 深度掌握 Flink 流式计算，擅长设计万级并发、亚秒级延迟的分布式系统，熟悉多级缓存与限流架构。
-    \item \textbf{复杂业务系统设计}: 具备交易、结算、风控等金融系统全流程设计经验，擅长复杂业务抽象与状态机建模，能独立完成 0 到 1 架构设计。
-    \item \textbf{平台化基础设施}: 构建可配置、可复用的规则引擎与任务调度平台，赋能业务快速迭代，任务上线周期从天级缩短至小时级。
+    \item \textbf{系统架构与分布式设计}：精通高并发、低延迟分布式系统架构，具备从 0 到 1 规划风控平台、规则引擎、实时计算引擎的实战经验。
+    \item \textbf{编程与云原生}：精通 Java，熟悉 Spring Cloud/Dubbo/Gin 等微服务框架，掌握 Docker、Kubernetes、Service Mesh 等云原生技术，具备容器化部署与云运维能力。
+    \item \textbf{大数据与实时计算}：熟练使用 Flink/Spark Streaming 构建实时特征计算引擎，掌握 Kafka/Pulsar 消息队列，熟悉 MySQL/PostgreSQL、HBase/Redis/ES、ClickHouse/Doris 等海量数据存储与 OLAP 技术。
+    \item \textbf{风控与模型工程化}：熟悉 Drools/Aviator 等规则引擎、Camunda/自研决策流引擎开发与优化，具备特征工程、实时特征服务、特征监控全流程经验。了解 TensorFlow Serving/MLflow 等模型部署与 AB 测试框架。
+    \item \textbf{系统稳定性与性能优化}：擅长高并发系统性能调优、容灾设计与监控报警体系建设，保障系统 99.99\% 可用性。
+    \item \textbf{跨团队协作与标准化}：推动风控系统与业务系统深度集成，制定接口与数据标准，注重技术文档与团队能力建设。
 \end{itemize}
 
 \end{document}
