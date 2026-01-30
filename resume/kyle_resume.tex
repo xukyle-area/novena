@@ -112,17 +112,17 @@
 % 核心项目经验
 \sectiontitle{核心项目经验}
 
-\projectentry{规则引擎系统 \textit{@老虎证券}}{Flink, Spring Boot, Kafka, Redis, MySQL, REST API}{
+\projectentry{规则引擎 \textit{@老虎证券}}{Flink, Spring Boot, Kafka, Redis, MySQL, REST API}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
-    \item \textbf{项目背景}: 构建统一的处理平台，支持动态任务配置与规则引擎，服务多业务场景。
+    \item \textbf{项目背景}: 构建统一的处理平台，支持动态任务配置与规则引擎，支持\textbf{风控、开户、KYC} 等多业务场景。
     \item \textbf{平台架构设计}: 构建多源数据接入架构，统一流式与批量任务处理，支持 Kafka, MySQL 作为数据源。
     \item \textbf{配置化管理}: 实现从数据源输入，到处理逻辑，再到输出，全链路配置化，支持业务方零代码快速上线新任务。
     \item \textbf{动态规则引擎}: 支持 Flink SQL 规则动态提交, 在线编辑与热加载，规则加载时间缩短 \textbf{90\%}。
-    \item \textbf{效率提升}: 任务上线周期从 \textbf{1 天降至 1 小时}，支撑多业务线实时计算需求。
+    \item \textbf{效率提升}: 任务上线周期从 1 天降至 1 小时，支撑多业务线实时计算需求。
 \end{itemize}
 }
 
-\projectentry{交易所行情系统 \textit{@老虎证券}}{Flink, Kafka, Redis, DynamoDB, WebSocket, MQTT, Thrift}{
+\projectentry{行情系统 \textit{@老虎证券}}{Flink, Kafka, Redis, DynamoDB, WebSocket, MQTT, Thrift}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
     \item \textbf{项目背景}: 构建统一的行情数据平台，整合内部撮合引擎与外部交易所行情，为交易、风控和前端提供实时数据服务。
     \item \textbf{内部行情计算}: 对接撮合引擎的成交流，基于 Flink 滑动窗口实现 K 线实时计算，支持深度、成交量等指标聚合。
