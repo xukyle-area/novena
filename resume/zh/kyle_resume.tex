@@ -1,0 +1,169 @@
+%!TEX program = xelatex
+\documentclass[10pt,a4paper]{article}
+
+% 基础包
+\usepackage[left=1.0cm, right=1.0cm, top=0.8cm, bottom=0.8cm]{geometry}
+\usepackage{xeCJK}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% 中文字体
+\setCJKmainfont{PingFang SC}
+
+% 颜色定义
+\definecolor{titlecolor}{RGB}{0, 102, 204}
+\definecolor{sectioncolor}{RGB}{51, 51, 51}
+
+% 超链接设置
+\hypersetup{
+    colorlinks=true,
+    linkcolor=titlecolor,
+    urlcolor=titlecolor,
+    pdfauthor={徐中建},
+    pdftitle={徐中建 - 简历}
+}
+
+% 段落设置
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\lineskip}{0pt}
+\setlength{\baselineskip}{10pt}
+\pagestyle{empty}
+
+% 自定义命令
+\newcommand{\name}[1]{
+    \begin{center}
+        {\LARGE\bfseries\color{titlecolor} #1}
+    \end{center}
+    \vspace{2pt}
+}
+
+\newcommand{\contactinfo}[4]{
+    \begin{center}
+        {\small #1 \quad | \quad #2 \quad | \quad #3 \quad | \quad #4}
+    \end{center}
+    \vspace{3pt}
+}
+
+\newcommand{\sectiontitle}[1]{
+    \vspace{5pt}
+    {\large\bfseries\color{sectioncolor} #1}
+    \vspace{1pt}
+    \hrule height 0.8pt
+    \vspace{5pt}
+}
+
+\newcommand{\jobentry}[5]{
+    \vspace{5pt}
+    \textbf{#1} \hfill #2 \hfill \textit{#3}\\
+    #5
+    \vspace{2pt}
+}
+
+\newcommand{\projectentry}[3]{
+    \vspace{5pt}
+    {\large\textbf{#1}}
+    \vspace{2pt}
+    {\small\textit{#2}}
+    \vspace{2pt}
+    #3
+    \vspace{5pt}
+}
+
+\begin{document}
+
+% 姓名
+\name{徐中建}
+
+% 联系方式
+\contactinfo{
+    \href{mailto:zjxu97@gmail.com}{zjxu97@gmail.com}
+}{
+    +86 18971672214
+}{
+    \href{https://linkedin.com/in/xu-kyle}{linkedin.com/in/xu-kyle}
+}{
+    高级后端开发工程师( 6 年工作经验)
+}
+
+% 教育经历
+\sectiontitle{教育经历}
+
+\textbf{黑龙江大学} \hfill \textit{2016.09 - 2020.06}\\
+电子信息工程 本科
+
+% 工作经历
+\sectiontitle{工作经历}
+
+\jobentry{老虎证券 · 加密货币交易所 · 交易后台组}{高级软件工程师}{2023.05 - now}{北京}{
+香港持牌交易所。负责交易所行情系统、OTC 业务和规则引擎平台的设计、开发与维护。
+}
+
+\jobentry{美团点评 · 到店事业群 · 酒店业务部 · 分销业务组}{软件工程师}{2021.05 - 2023.03}{北京}{
+负责酒店分销商管理系统的开发与维护，实现接口限流与签名校验系统。
+}
+
+\jobentry{小米集团 · 中国区 · 新零售业务部 · 系统开发组}{软件工程师}{2019.10 - 2021.04}{北京}{
+参与新零售业务系统的开发与优化，负责订单系统与库存管理模块。
+}
+
+% 核心项目经验
+\sectiontitle{核心项目经验}
+
+\projectentry{规则引擎 \textit{@老虎证券}}{Flink, Spring Boot, Kafka, Redis, MySQL, REST API}{
+\begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \textbf{项目背景}: 构建统一的处理平台，支持动态任务配置与规则引擎，支持\textbf{风控、开户、KYC} 等多业务场景。
+    \item \textbf{平台架构设计}: 构建多源数据接入架构，统一流式与批量任务处理，支持 Kafka, MySQL 作为数据源。
+    \item \textbf{配置化管理}: 实现从数据源输入，到处理逻辑，再到输出，全链路配置化，支持业务方零代码快速上线新任务。
+    \item \textbf{动态规则引擎}: 支持 Flink SQL 规则动态提交, 在线编辑与热加载，规则加载时间缩短 \textbf{90\%}。
+    \item \textbf{效率提升}: 任务上线周期从 1 天降至 1 小时，支撑多业务线实时计算需求。
+\end{itemize}
+}
+
+\projectentry{行情系统 \textit{@老虎证券}}{Flink, Kafka, Redis, DynamoDB, WebSocket, MQTT, Thrift}{
+\begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \textbf{项目背景}: 构建统一的行情数据平台，整合内部撮合引擎与外部交易所行情，为交易、风控和前端提供实时数据服务。
+    \item \textbf{内部行情计算}: 对接撮合引擎的成交流，基于 Flink 滑动窗口实现 K 线实时计算，支持深度、成交量等指标聚合。
+    \item \textbf{外部行情接入}: 通过 WebSocket 实时订阅 Binance、Crypto.com 等主流交易所行情，实现数据标准化与缓存。
+    \item \textbf{分层存储}: Redis 存储热数据 + DynamoDB 持久化历史行情，满足实时查询与监管报送需求。
+    \item \textbf{风控监控}: 实时监控价格异常波动、大额成交、流动性枯竭等风险事件，触发预警并自动切换备用数据源。
+\end{itemize}
+}
+
+\projectentry{OTC 系统 \textit{@老虎证券}}{Spring Boot, Redis, MySQL, XXL-Job, State Machine, Thrift, RateLimiter}{
+\begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \textbf{项目背景}: 构建法币与加密货币的 OTC 交易系统，支持用户与 LP（流动性提供商）大额兑换。
+    \item \textbf{价格管理}: 自主维护订单簿，支持多 LP 接口与 Socket 双通道报价，聚合算法生成最优价格。
+    \item \textbf{订单状态机}: 设计完整订单生命周期（报价→锁定→成交→结算→确认），覆盖资产锁定与资金划转。
+    \item \textbf{风控体系}: 基于 Flink 实时计算用户风险评分，结合开户信息与交易行为进行多维度风控。
+    \item \textbf{Net 结算优化}: 聚合未结算订单进行 Net 结算，减少划转次数，资金周转率提升 \textbf{70\%}。
+\end{itemize}
+}
+
+\projectentry{分销商管理系统 \textit{@美团点评}}{Spring, Redis, MySQL, XXL-Job, Thrift, State Machine, Guava Cache, MyBatis}{
+\begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \textbf{项目背景}: 面向全行业提供酒店门票分销服务，管理分销商全生命周期。
+    \item \textbf{接口限流系统}: 基于 Redis + Guava Cache 实现按商家维度的流量限制，防止恶意请求与系统过载。
+    \item \textbf{签名校验与鉴权}: Redis 存储签名信息，结合 Guava Cache 提高校验效率，QPS 提升 \textbf{3 倍}。
+    \item \textbf{生命周期管理}: State Machine 管理分销商状态流转（申请→审核→生效→暂停→下线），防止非法状态转换。
+    \item \textbf{商家画像与成本分析}: 处理商家打点信息，构建画像体系，支撑精准运营。
+    \item \textbf{接口限流}: 滑动窗口限流算法（Redis + Lua 脚本）；多级缓存架构（Guava Cache + Redis）降低 database 压力。
+\end{itemize}
+}
+
+% 专业技能
+\sectiontitle{专业技能与能力}
+
+\begin{itemize}[leftmargin=0.8em, itemsep=3pt, parsep=0pt, topsep=0pt]
+    \item \textbf{编程与框架}: 精通 Java、熟悉 Python、SQL；熟练使用 Spring Boot、MyBatis 等后端框架。
+    \item \textbf{中间件与存储}: 深度掌握 Flink 实时计算、Kafka 消息队列、Redis 缓存、MySQL 数据库、DynamoDB、Thrift RPC 等。
+    \item \textbf{架构与运维}: 具备微服务架构、高并发系统设计、DDD 领域建模、状态机设计能力；熟悉 Docker、Kubernetes、Prometheus、Grafana 等运维工具。
+    \item \textbf{实时计算与高并发架构}: 深度掌握 Flink 流式计算，擅长设计万级并发、亚秒级延迟的分布式系统，熟悉多级缓存与限流架构。
+    \item \textbf{复杂业务系统设计}: 具备交易、结算、风控等金融系统全流程设计经验，擅长复杂业务抽象与状态机建模，能独立完成 0 到 1 架构设计。
+    \item \textbf{平台化基础设施}: 构建可配置、可复用的规则引擎与任务调度平台，赋能业务快速迭代，任务上线周期从天级缩短至小时级。
+\end{itemize}
+
+\end{document}
+
