@@ -37,7 +37,7 @@
     \begin{center}
         {\LARGE\bfseries\color{titlecolor} #1}
     \end{center}
-    \vspace{1pt}
+    \vspace{2pt}
 }
 
 \newcommand{\contactinfo}[4]{
@@ -56,20 +56,20 @@
 }
 
 \newcommand{\jobentry}[5]{
-    \vspace{3pt}
+    \vspace{5pt}
     \textbf{#1} \hfill #2 \hfill \textit{#3}\\
     #5
     \vspace{2pt}
 }
 
 \newcommand{\projectentry}[3]{
-    \vspace{3pt}
+    \vspace{5pt}
     {\large\textbf{#1}}
-    \vspace{1pt}
+    \vspace{2pt}
     {\small\textit{#2}}
     \vspace{2pt}
     #3
-    \vspace{3pt}
+    \vspace{5pt}
 }
 
 \begin{document}
@@ -126,11 +126,9 @@
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
     \item \textbf{项目背景}: 构建统一的行情数据平台，整合内部撮合引擎与外部交易所行情，为交易、风控和前端提供实时数据服务。
     \item \textbf{内部行情计算}: 对接撮合引擎的成交流，基于 Flink 滑动窗口实现 K 线实时计算，支持深度、成交量等指标聚合。
-    \item \textbf{低延迟推送}: 基于 MQTT 协议实现行情实时推送，端到端延迟 \textbf{< 500ms}，支撑 \textbf{万级并发订阅}。
     \item \textbf{外部行情接入}: 通过 WebSocket 实时订阅 Binance、Crypto.com 等主流交易所行情，实现数据标准化与缓存。
     \item \textbf{分层存储}: Redis 存储热数据 + DynamoDB 持久化历史行情，满足实时查询与监管报送需求。
     \item \textbf{风控监控}: 实时监控价格异常波动、大额成交、流动性枯竭等风险事件，触发预警并自动切换备用数据源。
-    \item \textbf{技术亮点}: Flink 滑动窗口聚合与水位线机制保障数据一致性；多级缓存架构（Guava Cache + Redis）提高系统并发量。
 \end{itemize}
 }
 
