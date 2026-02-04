@@ -1,0 +1,164 @@
+%!TEX program = xelatex
+\documentclass[10pt,a4paper]{article}
+
+% Base packages
+\usepackage[left=1.0cm, right=1.0cm, top=0.8cm, bottom=0.8cm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% Color definitions
+\definecolor{titlecolor}{RGB}{0, 102, 204}
+\definecolor{sectioncolor}{RGB}{51, 51, 51}
+
+% Hyperlink settings
+\hypersetup{
+    colorlinks=true,
+    linkcolor=titlecolor,
+    urlcolor=titlecolor,
+    pdfauthor={Kyle Xu},
+    pdftitle={Kyle Xu - Resume}
+}
+
+% Paragraph settings
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\lineskip}{0pt}
+\setlength{\baselineskip}{10pt}
+\pagestyle{empty}
+
+% Custom commands
+\newcommand{\name}[1]{
+    \begin{center}
+        {\LARGE\bfseries\color{titlecolor} #1}
+    \end{center}
+    \vspace{2pt}
+}
+
+\newcommand{\contactinfo}[4]{
+    \begin{center}
+        {\small #1 \quad | \quad #2 \quad | \quad #3 \quad | \quad #4}
+    \end{center}
+    \vspace{3pt}
+}
+
+\newcommand{\sectiontitle}[1]{
+    \vspace{5pt}
+    {\large\bfseries\color{sectioncolor} #1}
+    \vspace{1pt}
+    \hrule height 0.8pt
+    \vspace{5pt}
+}
+
+\newcommand{\jobentry}[5]{
+    \vspace{5pt}
+    \textbf{#1} \hfill #2 \hfill \textit{#3}\\
+    #5
+    \vspace{2pt}
+}
+
+\newcommand{\projectentry}[3]{
+    \vspace{5pt}
+    {\large\textbf{#1}}
+    \vspace{2pt}
+    {\small\textit{#2}}
+    \vspace{2pt}
+    #3
+    \vspace{5pt}
+}
+
+\begin{document}
+
+% Name
+\name{Kyle Xu (Zhongjian Xu)}
+
+% Contact Information
+\contactinfo{
+    \href{mailto:zjxu97@gmail.com}{zjxu97@gmail.com}
+}{
+    +86 18971672214
+}{
+    \href{https://linkedin.com/in/xu-kyle}{linkedin.com/in/xu-kyle}
+}{
+    Senior Backend Engineer (6 Years of Experience)
+}
+
+% Education
+\sectiontitle{Education}
+
+\textbf{Heilongjiang University} \hfill \textit{Sep 2016 - Jun 2020}\\
+Bachelor of Engineering in Electronic Information Engineering
+
+% Work Experience
+\sectiontitle{Work Experience}
+
+\jobentry{Tiger Brokers · Crypto Exchange · Post-Trade Team}{Senior Software Engineer}{May 2023 - Present}{Beijing}{
+Hong Kong licensed cryptocurrency exchange. Responsible for the design, development, and maintenance of market data systems, OTC business, and rule engine platform.
+}
+
+\jobentry{Meituan · In-Store Business Group · Hotel Division · Distribution Team}{Software Engineer}{May 2021 - Mar 2023}{Beijing}{
+Responsible for the development and maintenance of hotel distributor management system, implementing API rate limiting and signature verification systems.
+}
+
+\jobentry{Xiaomi · China Region · New Retail Business · System Development Team}{Software Engineer}{Oct 2019 - Apr 2021}{Beijing}{
+Participated in new retail business system development and optimization, responsible for order system and inventory management modules.
+}
+
+% Core Project Experience
+\sectiontitle{Core Project Experience}
+
+\projectentry{Rule Engine Platform \textit{@Tiger Brokers}}{Flink, Spring Boot, Kafka, Redis, MySQL, REST API}{
+\begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \textbf{Background}: Built a unified processing platform supporting dynamic task configuration and rule engine for \textbf{risk control, account opening, KYC} and other business scenarios.
+    \item \textbf{Platform Architecture}: Designed multi-source data ingestion architecture, unified streaming and batch task processing, supporting Kafka and MySQL as data sources.
+    \item \textbf{Configuration Management}: Implemented end-to-end configuration from data source input, processing logic, to output, enabling zero-code rapid deployment for business teams.
+    \item \textbf{Dynamic Rule Engine}: Supported Flink SQL dynamic rule submission, online editing and hot-reloading, reducing rule loading time by \textbf{90\%}.
+    \item \textbf{Efficiency Improvement}: Reduced task deployment cycle from 1 day to 1 hour, supporting real-time computing requirements across multiple business lines.
+\end{itemize}
+}
+
+\projectentry{Market Data System \textit{@Tiger Brokers}}{Flink, Kafka, Redis, DynamoDB, WebSocket, MQTT, Thrift}{
+\begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \textbf{Background}: Built a unified market data platform integrating internal matching engine and external exchange data, providing real-time data services for trading, risk control, and frontend.
+    \item \textbf{Internal Market Calculation}: Connected to matching engine trade stream, implemented real-time K-line calculation using Flink sliding windows, supporting depth, volume, and other indicator aggregations.
+    \item \textbf{External Market Integration}: Real-time subscription to major exchanges (Binance, Crypto.com) via WebSocket, implementing data standardization and caching.
+    \item \textbf{Tiered Storage}: Redis for hot data + DynamoDB for historical market data persistence, meeting real-time query and regulatory reporting requirements.
+    \item \textbf{Risk Monitoring}: Real-time monitoring of abnormal price fluctuations, large transactions, and liquidity depletion events, triggering alerts and automatic failover to backup data sources.
+\end{itemize}
+}
+
+\projectentry{OTC Trading System \textit{@Tiger Brokers}}{Spring Boot, Redis, MySQL, XXL-Job, State Machine, Thrift, RateLimiter}{
+\begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \textbf{Background}: Built an OTC trading system for fiat and cryptocurrency, supporting large-volume exchanges between users and LPs (Liquidity Providers).
+    \item \textbf{Price Management}: Maintained proprietary order book, supporting multi-LP API and Socket dual-channel quoting, aggregation algorithm for optimal pricing.
+    \item \textbf{Order State Machine}: Designed complete order lifecycle (Quote→Lock→Trade→Settlement→Confirmation), covering asset locking and fund transfers.
+    \item \textbf{Risk Control System}: Real-time user risk scoring based on Flink, combining account information and trading behavior for multi-dimensional risk control.
+    \item \textbf{Net Settlement Optimization}: Aggregated unsettled orders for net settlement, reducing transfer frequency, improving capital turnover rate by \textbf{70\%}.
+\end{itemize}
+}
+
+\projectentry{Distributor Management System \textit{@Meituan}}{Spring, Redis, MySQL, XXL-Job, Thrift, State Machine, Guava Cache, MyBatis}{
+\begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \textbf{Background}: Provided hotel and ticket distribution services across industries, managing full distributor lifecycle.
+    \item \textbf{Rate Limiting System}: Implemented merchant-level traffic limiting based on Redis + Guava Cache, preventing malicious requests and system overload.
+    \item \textbf{Signature Verification}: Redis for signature storage combined with Guava Cache for improved verification efficiency, QPS improved by \textbf{3x}.
+    \item \textbf{Lifecycle Management}: State Machine managing distributor status transitions (Application→Review→Active→Suspended→Offline), preventing illegal state transitions.
+    \item \textbf{Merchant Profiling}: Processed merchant tracking data, built profiling system supporting precision operations.
+    \item \textbf{Rate Limiting}: Sliding window rate limiting algorithm (Redis + Lua script); multi-level cache architecture (Guava Cache + Redis) reducing database pressure.
+\end{itemize}
+}
+
+% Professional Skills
+\sectiontitle{Professional Skills}
+
+\begin{itemize}[leftmargin=0.8em, itemsep=3pt, parsep=0pt, topsep=0pt]
+    \item \textbf{Programming \& Frameworks}: Proficient in Java, familiar with Python and SQL; skilled in Spring Boot, MyBatis and other backend frameworks.
+    \item \textbf{Middleware \& Storage}: Deep expertise in Flink real-time computing, Kafka messaging, Redis caching, MySQL, DynamoDB, Thrift RPC, etc.
+    \item \textbf{Architecture \& DevOps}: Experienced in microservices architecture, high-concurrency system design, DDD domain modeling, state machine design; familiar with Docker, Kubernetes, Prometheus, Grafana.
+    \item \textbf{Real-time Computing \& High-Concurrency}: Deep expertise in Flink stream processing, skilled in designing distributed systems with 10k+ concurrency and sub-second latency, familiar with multi-level caching and rate limiting architectures.
+    \item \textbf{Complex Business System Design}: Extensive experience in trading, settlement, and risk control financial system design, skilled in complex business abstraction and state machine modeling, capable of independent 0-to-1 architecture design.
+    \item \textbf{Platform Infrastructure}: Built configurable, reusable rule engine and task scheduling platforms, enabling rapid business iteration, reducing task deployment cycle from days to hours.
+\end{itemize}
+
+\end{document}
