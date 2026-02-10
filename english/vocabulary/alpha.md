@@ -25,7 +25,7 @@
 | 21   | proposition         | 主张       | architecture | 建筑学 | architectural | 建筑学的 |
 | 22   | architect           | 构建       | configuration  | 配置       | configure             | 配置、设置   |
 | 23   | config              | 配置       | distinguish    | 区分       | centralized exchanges | 中心化交易所 |
-| 24   | configurable        | 可配置的   |                |            | decentralized exchanges | 去中心化 |
+| 24   | configurable        | 可配置的   |   several             |    一些，几个        | decentralized exchanges | 去中心化 |
 | 25   | scenario            | 场景       |                |            |                 |              |
 | 26   | unified             | 统一       |                |            |                 |              |
 | 27   |                     |            |                |            |                 |              |
