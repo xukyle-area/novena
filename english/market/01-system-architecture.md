@@ -1,4 +1,4 @@
-# Market Data System Architecture
+# System Architecture
 
 ## Core Positioning
 
@@ -8,23 +8,23 @@ This is a real-time market data processing system built around Kafka and Flink a
 - The second objective ensures that market data can be replayed and recalculated when needed for analysis or recovery scenarios.
 - The third objective provides unified processing for both internal matching engine data and external market data sources.
 
-## System Architecture Layers
+## System Components
 
-### Layer 1: External Market Data Sources
+### Component 1: External Market Data Sources
 
-The outer market layer consists of various external data source connectors including Binance WebSocket connections, Binance REST API integrations, and other exchange data sources. This layer is responsible for ingesting external exchange market data through multiple channels.
+The outer market component consists of various external data source connectors including Binance WebSocket connections, Binance REST API integrations, and other exchange data sources. This component is responsible for ingesting external exchange market data through multiple channels.
 
 WebSocket connections provide real-time tick data, trade executions, and order book depth updates. The REST API integration serves two critical purposes: filling historical data gaps and recovering from connection interruptions. This dual-channel approach ensures we maintain continuous data coverage even when WebSocket connections experience temporary failures.
 
 The design intentionally separates external market data because external sources are inherently unreliable and unstable. We cannot trust external data with the same confidence as internally generated data. Therefore, external market data must be completely decoupled from our internal matching engine output and must flow through the same internal processing pipeline to ensure consistency.
 
-### Layer 2: Internal Trade Service Group
+### Component 2: Internal Trade Service Group
 
 The internal trade service group centers around the matching engine, which is the authoritative source for all internal trade execution data. The matching engine's primary responsibility is executing order matching logic and producing authoritative trade events and order book mutation events.
 
 One critical architectural decision is that the matching engine never directly faces client connections. Its sole responsibility is calculating trade executions based on order matching rules. This separation of concerns allows the matching engine to focus exclusively on deterministic order matching without being burdened by concerns about data distribution or client connectivity.
 
-### Layer 3: Event Decoupling Layer (Kafka)
+### Component 3: Event Decoupling (Kafka)
 
 Kafka serves as the event backbone connecting the matching engine to downstream processing systems. The architecture uses Kafka at two critical junctions in the data flow pipeline.
 
@@ -32,17 +32,17 @@ The first junction receives events directly from the matching engine and writes 
 
 Kafka fulfills four essential roles in this architecture. First, it provides complete decoupling between the matching engine and market data processing systems, allowing them to evolve independently. Second, it provides buffering capacity to handle traffic spikes and smooth out processing loads. Third, it enables event replay capability, which is crucial for debugging, backtesting, and disaster recovery scenarios. Fourth, it serves as the natural input source for Flink streaming jobs, providing reliable event consumption with exactly-once semantics.
 
-### Layer 4: Stream Processing Core (Flink)
+### Component 4: Stream Processing Core (Flink)
 
 Flink jobs represent the computational heart of the system, sitting at the center of the architecture diagram. These jobs consume events from Kafka topics and perform real-time stream processing to generate various market data products.
 
-The Flink processing layer consumes several types of events from Kafka including trade execution events and order book mutation events. Based on these raw event streams, Flink jobs compute various market data artifacts such as order books at different price resolutions, real-time ticker data with 24-hour statistics, and candlestick charts at multiple time resolutions.
+The Flink processing component consumes several types of events from Kafka including trade execution events and order book mutation events. Based on these raw event streams, Flink jobs compute various market data artifacts such as order books at different price resolutions, real-time ticker data with 24-hour statistics, and candlestick charts at multiple time resolutions.
 
 Flink was chosen specifically because it provides stateful stream processing capabilities with exactly-once guarantees. The system uses RocksDB as the state backend, which allows maintaining large state datasets that exceed available memory. Checkpointing is configured at 60-second intervals to ensure we can recover quickly from failures without losing significant processing progress.
 
 One critical architectural decision is how we partition processing across Flink's parallel execution slots. Different types of market data require different parallelization strategies. Order book processing must be strictly serialized per trading symbol because order book updates are inherently stateful and order-dependent. However, ticker and candlestick calculations can be parallelized much more aggressively because they involve stateless aggregations over event streams.
 
-### Layer 5: Data Storage and Distribution Layer
+### Component 5: Data Storage and Distribution
 
 After Flink jobs complete their stream processing, processed market data artifacts are written to Redis for low-latency access by client-facing services. Redis was selected because it provides microsecond-level read latency and supports pub/sub patterns for real-time notification of data updates.
 
