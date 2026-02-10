@@ -177,43 +177,43 @@
 #### **开始回答时：**
 
 ```Plain
-✅ "That's a great question. Let me think about..."
-✅ "Interesting. In my experience..."
-✅ "Sure, I can explain that..."
-✅ "Absolutely. Let me walk you through..."
+"That's a great question. Let me think about..."
+"Interesting. In my experience..."
+"Sure, I can explain that..."
+"Absolutely. Let me walk you through..."
 
-❌ 不要直接开始："We use Redis..."（太突兀）
+不要直接开始："We use Redis..."（太突兀）
 ```
 
 #### **组织思路时：**
 
 ```Plain
-✅ "There are three main aspects to consider..."
-✅ "Let me break this down..."
-✅ "First... Second... Third..."
-✅ "On one hand... On the other hand..."
+"There are three main aspects to consider..."
+"Let me break this down..."
+"First... Second... Third..."
+"On one hand... On the other hand..."
 
-❌ 不要跳跃："Redis... Kafka... MySQL..."（没逻辑）
+不要跳跃："Redis... Kafka... MySQL..."（没逻辑）
 ```
 
 #### **举例时：**
 
 ```Plain
-✅ "For instance, in our trading system..."
-✅ "Let me give you a concrete example..."
-✅ "To illustrate this..."
+"For instance, in our trading system..."
+"Let me give you a concrete example..."
+"To illustrate this..."
 
-❌ 不要说："Like our system..."（太口语化）
+不要说："Like our system..."（太口语化）
 ```
 
 #### **表达不确定时：**
 
 ```Plain
-✅ "I'm not entirely sure, but my understanding is..."
-✅ "I haven't worked with that directly, but I would approach it by..."
-✅ "That's a good point. Let me think..."
+"I'm not entirely sure, but my understanding is..."
+"I haven't worked with that directly, but I would approach it by..."
+"That's a good point. Let me think..."
 
-❌ 不要说："I don't know."（就结束了）
+不要说："I don't know."（就结束了）
 ```
 
 ### **3. 发音和语音语调（Pronunciation & Intonation）**
@@ -222,9 +222,9 @@
 
 ```Plain
 你可能知道所有单词，但：
-❌ 重音位置错误：data vs. data
-❌ 连读不自然：want to → wanna（口语场景）
-❌ 语调平淡，听起来不自信
+重音位置错误：data vs. data
+连读不自然：want to → wanna（口语场景）
+语调平淡，听起来不自信
 ```
 
 **需要练习的发音难点：**
@@ -244,9 +244,9 @@
 10. queue /kjuː/
 
 建议：
-✅ 每个技术词汇听3遍标准发音（Forvo.com）
-✅ 录音对比自己的发音
-✅ 重点练习你项目中的高频词
+每个技术词汇听3遍标准发音（Forvo.com）
+录音对比自己的发音
+重点练习你项目中的高频词
 ```
 
 ### **4. 文化和沟通习惯（Communication Style）**
@@ -254,14 +254,14 @@
 #### **新加坡/国际面试的特点：**
 
 ```Plain
-✅ 要做的：
+要做的：
 - 保持眼神接触（视频面试看摄像头）
 - 微笑和点头表示理解
 - 适当使用手势
 - 主动澄清问题："Just to clarify..."
 - 问题回答完后问："Does that answer your question?"
 
-❌ 避免的：
+避免的：
 - 长时间沉默不说话
 - 说话太快，含糊不清
 - 过度使用"um, uh, like"

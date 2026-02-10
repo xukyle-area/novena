@@ -1,3 +1,5 @@
+# 自我介绍
+
 ## **English Version**
 
 Hello, my name is Xu Zhongjian. I graduated from Heilongjiang University in 2020 with a degree in Electronic Engineering. After graduation, I worked at Xiaomi and Meituan. Currently, I work at Tiger Brokers as a software engineer.
@@ -24,3 +26,26 @@ Through years of professional experience, I have developed extensive expertise, 
 （2）场外交易，我领导了架构设计和开发，从连接外部流动性提供商到处理内部订单和结算工作流程。
 
 多年的专业经验，让我积累了丰富的专业知识，精通Java生态系统，在高并发系统、实时数据处理、分布式系统架构设计等方面拥有丰富的实践经验。谢谢！
+
+# Background
+
+## **English Version**
+
+one:
+Tiger is an online brokerage firm serving global investors, offering an online trading platform for equities and other financial instruments across multiple international exchanges.
+I worked in a department within the Tiger Group that was responsible for building a fully compliant centralized cryptocurrency exchange in Hong Kong. After successfully receiving approval from the Hong Kong SFC, the department was later sold to another company. As a result, I am now considering my next career move and actively exploring new opportunities.
+
+two:
+Tiger is an online brokerage firm focused on global investors. It provides an online trading platform that allows investors to trade equities and other financial instruments across multiple exchanges worldwide.
+I was part of a department within the Tiger Group that aimed to build a compliant centralized cryptocurrency exchange in Hong Kong. After obtaining approval from the Hong Kong SFC, the department was sold to another company. Following this transition, I am exploring new career opportunities and seeking suitable positions.
+
+## 中文版本
+
+one:
+Tiger是一家服务于全球投资者的在线券商，提供跨多个国际交易所的股票及其他金融工具在线交易平台。
+我曾在Tiger集团的一个部门工作，该部门负责在香港搭建一个完全合规的中心化加密货币交易所。在成功获得香港证监会批准后，该部门被出售给了另一家公司。因此，我现在正在考虑下一步的职业发展，并积极寻找新的机会。
+
+
+two:
+Tiger是一家专注于全球投资者的在线券商。它提供在线交易平台，使投资者能够在全球多个交易所交易股票和其他金融工具。
+我曾是Tiger集团旗下一个部门的成员，该部门致力于在香港建立一个合规的中心化加密货币交易所。在获得香港证监会批准后，该部门被出售给了另一家公司。此次转让后，我正在寻找新的职业机会和合适的职位。
