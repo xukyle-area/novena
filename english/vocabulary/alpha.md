@@ -27,7 +27,7 @@
 | 23   | config| 配置| distinguish    | 区分| centralized  | 中心化的 |
 | 24   | configurable | 可配置的   |   several |    一些，几个 | decentralized  | 去中心化的 |
 | 25   | scenario     | 场景|     objective    | 目标、客观的  |   backbone|      骨干 |
-| 26   | unified      | 统一| decouple |解耦   |   ||
+| 26   | unified      | 统一| decouple |解耦   | predictable |可预测的|
 | 27   ||     |  |     |   ||
 | 28   ||     |  |     |   ||
 |      ||     |  |     |   ||

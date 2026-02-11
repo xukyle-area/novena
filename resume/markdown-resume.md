@@ -47,7 +47,7 @@ zjxu97@gmail.com | +86 18971672214 | [LinkedIn](https://linkedin.com/in/xu-kyle)
 
 **核心成果**：
 - **内部行情流**：对接撮合引擎，基于 Flink 实现窗口聚合与 K 线生成（1s/1m/5m/1h/1d），结果 sink 至 Kafka
-- **外部行情聚合**：WebSocket 实时订阅 Binance、Crypto.com 等主流交易所，缓存与持久化
+- **外部行情聚合**：使用 WebSocket 实时订阅 Binance、Crypto.com 等主流交易所的行情，缓存与持久化
 - **低延迟推送**：通过 MQTT 协议实时推送行情，延迟降至 **< 500ms**，支撑 **万级并发**
 - **分层存储**：Redis 热数据缓存 + DynamoDB 历史数据持久化，支持监管报送
 - **风控监控**：实时监控价格剧烈波动、异常大单、流动性枯竭，触发预警并自动切换备用数据源

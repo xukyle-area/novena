@@ -112,43 +112,43 @@
 % 核心项目经验
 \sectiontitle{核心项目经验}
 
-\projectentry{规则引擎 \textit{@老虎证券}}{Flink, Spring Boot, Kafka, Redis, MySQL, REST API}{
+\projectentry{行情系统 \textit{@老虎证券}}{Flink, Kafka, Redis, DynamoDB, WebSocket, MQTT, Thrift}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
-    \item \textbf{项目背景}: 构建统一的处理平台，支持动态任务配置与规则引擎，支持\textbf{风控、开户、KYC} 等多业务场景。
-    \item \textbf{平台架构设计}: 构建多源数据接入架构，统一流式与批量任务处理，支持 Kafka, MySQL 作为数据源。
-    \item \textbf{配置化管理}: 实现从数据源输入，到处理逻辑，再到输出，全链路配置化，支持业务方零代码快速上线新任务。
-    \item \textbf{动态规则引擎}: 支持 Flink SQL 规则动态提交, 在线编辑与热加载，规则加载时间缩短 \textbf{90\%}。
-    \item \textbf{效率提升}: 任务上线周期从 1 天降至 1 小时，支撑多业务线实时计算需求。
+    \item \textbf{项目背景}: 构建统一的行情数据平台，整合内部撮合引擎与外部行情，为交易、风控和前端提供实时数据服务。
+    \item \textbf{内部行情计算}: 对接撮合引擎输出的成交流，基于 Flink 实时计算 ticker、candle 和 orderbook 数据。
+    \item \textbf{外部行情集成}: 通过 websocket 订阅外部主流交易所行情，集成外部行情到系统中，提高风险控制能力。
+    \item \textbf{分层处理}: MQTT 输出实时数据、Redis 存储热数据、DynamoDB 持久化历史行情，满足实时推送，热点数据拉取，与历史数据查询。
+    \item \textbf{低延迟推送}: 通过 MQTT 协议实时推送行情，端到端推送延迟时间小于 50ms。
 \end{itemize}
 }
 
-\projectentry{行情系统 \textit{@老虎证券}}{Flink, Kafka, Redis, DynamoDB, WebSocket, MQTT, Thrift}{
+\projectentry{规则引擎 \textit{@老虎证券}}{Flink, Spring Boot, Kafka, Redis, MySQL, REST API}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
-    \item \textbf{项目背景}: 构建统一的行情数据平台，整合内部撮合引擎与外部交易所行情，为交易、风控和前端提供实时数据服务。
-    \item \textbf{内部行情计算}: 对接撮合引擎的成交流，基于 Flink 滑动窗口实现 K 线实时计算，支持深度、成交量等指标聚合。
-    \item \textbf{外部行情接入}: 通过 WebSocket 实时订阅 Binance、Crypto.com 等主流交易所行情，实现数据标准化与缓存。
-    \item \textbf{分层存储}: Redis 存储热数据 + DynamoDB 持久化历史行情，满足实时查询与监管报送需求。
-    \item \textbf{风控监控}: 实时监控价格异常波动、大额成交、流动性枯竭等风险事件，触发预警并自动切换备用数据源。
+    \item \textbf{项目背景}: 基于 Flink 设计了规则引擎平台，解决规则变更必须发版的问题，覆盖\textbf{风控、开户、KYC}等多业务场景。
+    \item \textbf{规则配置中心}: 实现规则配置与SQL模板化、参数化管理，支持在线编辑与热加载，规则变更效率提升 \textbf{80\%}。
+    \item \textbf{任务生命周期管理}: 实现任务动态提交与状态管理，支持 savepoint 重启与故障恢复，保障规则持续运行。
+    \item \textbf{多源适配框架}: 采用适配器模式统一数据源与输出（Kafka、MySQL、WebSocket等），提升平台扩展性。
+    \item \textbf{自动化运维}: 开发定时调度器监控规则变更并触发增量更新，任务上线周期从 1 天缩短至 1 小时。
 \end{itemize}
 }
 
 \projectentry{OTC 系统 \textit{@老虎证券}}{Spring Boot, Redis, MySQL, XXL-Job, State Machine, Thrift, RateLimiter}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
-    \item \textbf{项目背景}: 构建法币与加密货币的 OTC 交易系统，支持用户与 LP（流动性提供商）大额兑换。
+    \item \textbf{项目背景}: 构建法币与加密货币的 OTC 交易系统，支持用户与 LP (流动性提供商) 大额兑换。
     \item \textbf{价格管理}: 自主维护订单簿，支持多 LP 接口与 Socket 双通道报价，聚合算法生成最优价格。
-    \item \textbf{订单状态机}: 设计完整订单生命周期（报价→锁定→成交→结算→确认），覆盖资产锁定与资金划转。
+    \item \textbf{订单状态机}: 设计完整订单生命周期，覆盖用户的询价、下单、结算等流程。构建可靠的资金锁定与划转流程。
     \item \textbf{风控体系}: 基于 Flink 实时计算用户风险评分，结合开户信息与交易行为进行多维度风控。
-    \item \textbf{Net 结算优化}: 聚合未结算订单进行 Net 结算，减少划转次数，资金周转率提升 \textbf{70\%}。
+    \item \textbf{结算优化}: 聚合未结算订单进行 Net 结算，减少划转次数，资金周转率提升 \textbf{70\%}。
 \end{itemize}
 }
 
 \projectentry{分销商管理系统 \textit{@美团点评}}{Spring, Redis, MySQL, XXL-Job, Thrift, State Machine, Guava Cache, MyBatis}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
-    \item \textbf{项目背景}: 面向全行业提供酒店门票分销服务，管理分销商全生命周期。
-    \item \textbf{接口限流系统}: 基于 Redis + Guava Cache 实现按商家维度的流量限制，防止恶意请求与系统过载。
+    \item \textbf{项目背景}: 美团酒旅面向全行业提供酒店门票分销服务，管理分销商全生命周期。
+    \item \textbf{接口限流系统}: 基于 Redis 实现按商家与接口维度的流量限制，防止恶意请求与系统过载。
     \item \textbf{签名校验与鉴权}: Redis 存储签名信息，结合 Guava Cache 提高校验效率，QPS 提升 \textbf{3 倍}。
-    \item \textbf{生命周期管理}: State Machine 管理分销商状态流转（申请→审核→生效→暂停→下线），防止非法状态转换。
-    \item \textbf{商家画像与成本分析}: 处理商家打点信息，构建画像体系，支撑精准运营。
+    \item \textbf{生命周期管理}: State Machine 管理分销商从申请，到接入，最终到下线的状态流转，防止非法状态转换。
+    \item \textbf{商家画像与成本分析}: 处理商家打点信息，构建商家画像体系，为运营活动提供精准的数据支持。
     \item \textbf{接口限流}: 滑动窗口限流算法（Redis + Lua 脚本）；多级缓存架构（Guava Cache + Redis）降低 database 压力。
 \end{itemize}
 }
