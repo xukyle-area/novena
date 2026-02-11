@@ -7,6 +7,8 @@
 \usepackage{titlesec}
 \usepackage{xcolor}
 \usepackage{hyperref}
+\usepackage{fontspec}
+\setmainfont{Gill Sans}
 
 % Color definitions
 \definecolor{titlecolor}{RGB}{0, 102, 204}
@@ -84,6 +86,11 @@
     Senior Backend Engineer (6 Years of Experience)
 }
 
+% Summary
+\sectiontitle{Summary}
+
+Backend engineer with 6 years of experience in distributed systems and real-time processing. Specialized in market data infrastructure, trading systems, and streaming architectures using Flink and Kafka. Strong background in high-concurrency system design and financial system modeling.
+
 % Education
 \sectiontitle{Education}
 
@@ -93,48 +100,45 @@ Bachelor of Engineering in Electronic Information Engineering
 % Work Experience
 \sectiontitle{Work Experience}
 
-\jobentry{Tiger Brokers · Crypto Exchange · Post-Trade Team}{Senior Software Engineer}{May 2023 - Present}{Beijing}{
-Hong Kong licensed cryptocurrency exchange. Responsible for the design, development, and maintenance of market data systems, OTC business, and rule engine platform.
+\jobentry{Tiger Brokers · Crypto Exchange}{Senior Software Engineer}{May 2023 - Present}{Beijing}{
+Hong Kong licensed cryptocurrency exchange. Core contributor to market data, OTC trading, and real-time rule engine.
 }
 
-\jobentry{Meituan · In-Store Business Group · Hotel Division · Distribution Team}{Software Engineer}{May 2021 - Mar 2023}{Beijing}{
-Responsible for the development and maintenance of hotel distributor management system, implementing API rate limiting and signature verification systems.
+\jobentry{Meituan · Hotel \& Travel Group}{Software Engineer}{May 2021 - Mar 2023}{Beijing}{
+Built merchant-level rate limiting with Redis and implemented signature verification with multi-level cache to improve throughput.
 }
 
-\jobentry{Xiaomi · China Region · New Retail Business · System Development Team}{Software Engineer}{Oct 2019 - Apr 2021}{Beijing}{
-Participated in new retail business system development and optimization, responsible for order system and inventory management modules.
+\jobentry{Xiaomi}{Software Engineer}{Oct 2019 - Apr 2021}{Beijing}{
+Contributed to retail management systems focusing on order and inventory modules and improved consistency.
 }
 
 % Core Project Experience
 \sectiontitle{Core Project Experience}
 
-\projectentry{Rule Engine Platform \textit{@Tiger Brokers}}{Flink, Spring Boot, Kafka, Redis, MySQL, REST API}{
+\projectentry{Market Data Infrastructure \textit{@Tiger Brokers}}{Flink, Kafka, Redis, DynamoDB, WebSocket, MQTT, Thrift}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
-    \item \textbf{Background}: Built a unified processing platform supporting dynamic task configuration and rule engine for \textbf{risk control, account opening, KYC} and other business scenarios.
-    \item \textbf{Platform Architecture}: Designed multi-source data ingestion architecture, unified streaming and batch task processing, supporting Kafka and MySQL as data sources.
-    \item \textbf{Configuration Management}: Implemented end-to-end configuration from data source input, processing logic, to output, enabling zero-code rapid deployment for business teams.
-    \item \textbf{Dynamic Rule Engine}: Supported Flink SQL dynamic rule submission, online editing and hot-reloading, reducing rule loading time by \textbf{90\%}.
-    \item \textbf{Efficiency Improvement}: Reduced task deployment cycle from 1 day to 1 hour, supporting real-time computing requirements across multiple business lines.
+    \item \textbf{Market Data}: Consumed trade-level events from the matching engine and computed real-time candlestick data with Flink.
+    \item \textbf{External Feed Integration}: Integrated external exchange feeds (e.g., Binance) for redundancy and price validation.
+    \item \textbf{Tiered Architecture}: Designed MQTT real-time push (<50ms), Redis hot cache, and DynamoDB historical storage.
+    \item \textbf{Risk Monitoring}: Implemented real-time volatility and liquidity monitoring for automated risk alerts.
 \end{itemize}
 }
 
-\projectentry{Market Data System \textit{@Tiger Brokers}}{Flink, Kafka, Redis, DynamoDB, WebSocket, MQTT, Thrift}{
+\projectentry{Real-Time Rule Engine Platform \textit{@Tiger Brokers}}{Flink, Spring Boot, Kafka, Redis, MySQL, REST API}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
-    \item \textbf{Background}: Built a unified market data platform integrating internal matching engine and external exchange data, providing real-time data services for trading, risk control, and frontend.
-    \item \textbf{Internal Market Calculation}: Connected to matching engine trade stream, implemented real-time K-line calculation using Flink sliding windows, supporting depth, volume, and other indicator aggregations.
-    \item \textbf{External Market Integration}: Real-time subscription to major exchanges (Binance, Crypto.com) via WebSocket, implementing data standardization and caching.
-    \item \textbf{Tiered Storage}: Redis for hot data + DynamoDB for historical market data persistence, meeting real-time query and regulatory reporting requirements.
-    \item \textbf{Risk Monitoring}: Real-time monitoring of abnormal price fluctuations, large transactions, and liquidity depletion events, triggering alerts and automatic failover to backup data sources.
+    \item \textbf{Rule Engine}: Built a configurable Flink-based rule engine enabling hot rule deployment without service releases.
+    \item \textbf{Job Lifecycle}: Implemented dynamic job lifecycle management with savepoint recovery and state persistence.
+    \item \textbf{Efficiency}: Reduced rule rollout time from 2 day to 1 hour.
+    \item \textbf{Adapter Framework}: Designed multi-source adapters (Kafka, MySQL, WebSocket) for extensible data integration.
 \end{itemize}
 }
 
 \projectentry{OTC Trading System \textit{@Tiger Brokers}}{Spring Boot, Redis, MySQL, XXL-Job, State Machine, Thrift, RateLimiter}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
-    \item \textbf{Background}: Built an OTC trading system for fiat and cryptocurrency, supporting large-volume exchanges between users and LPs (Liquidity Providers).
-    \item \textbf{Price Management}: Maintained proprietary order book, supporting multi-LP API and Socket dual-channel quoting, aggregation algorithm for optimal pricing.
-    \item \textbf{Order State Machine}: Designed complete order lifecycle (Quote→Lock→Trade→Settlement→Confirmation), covering asset locking and fund transfers.
-    \item \textbf{Risk Control System}: Real-time user risk scoring based on Flink, combining account information and trading behavior for multi-dimensional risk control.
-    \item \textbf{Net Settlement Optimization}: Aggregated unsettled orders for net settlement, reducing transfer frequency, improving capital turnover rate by \textbf{70\%}.
+    \item \textbf{OTC Platform}: Designed OTC trading platform supporting fiat-crypto large-volume transactions.
+    \item \textbf{Pricing}: Implemented proprietary order book aggregation across multiple LPs for optimal pricing.
+    \item \textbf{Order Lifecycle}: Modeled full order lifecycle using a state machine (Quote \textrightarrow Lock \textrightarrow Trade \textrightarrow Settlement).
+    \item \textbf{Settlement}: Optimized net settlement process, improving capital turnover by \textbf{70\%}.
 \end{itemize}
 }
 
@@ -143,22 +147,20 @@ Participated in new retail business system development and optimization, respons
     \item \textbf{Background}: Provided hotel and ticket distribution services across industries, managing full distributor lifecycle.
     \item \textbf{Rate Limiting System}: Implemented merchant-level traffic limiting based on Redis + Guava Cache, preventing malicious requests and system overload.
     \item \textbf{Signature Verification}: Redis for signature storage combined with Guava Cache for improved verification efficiency, QPS improved by \textbf{3x}.
-    \item \textbf{Lifecycle Management}: State Machine managing distributor status transitions (Application→Review→Active→Suspended→Offline), preventing illegal state transitions.
-    \item \textbf{Merchant Profiling}: Processed merchant tracking data, built profiling system supporting precision operations.
-    \item \textbf{Rate Limiting}: Sliding window rate limiting algorithm (Redis + Lua script); multi-level cache architecture (Guava Cache + Redis) reducing database pressure.
+    \item \textbf{Lifecycle Management}: State Machine managing distributor status transitions from application to offline, preventing illegal state transitions.
+    \item \textbf{Rate Limiting}: Based on Redis, build a high-efficiency rate limiting algorithm to achieve multi-dimensional rate limiting.
 \end{itemize}
 }
 
 % Professional Skills
-\sectiontitle{Professional Skills}
+\sectiontitle{Technical Skills}
 
 \begin{itemize}[leftmargin=0.8em, itemsep=3pt, parsep=0pt, topsep=0pt]
-    \item \textbf{Programming \& Frameworks}: Proficient in Java, familiar with Python and SQL; skilled in Spring Boot, MyBatis and other backend frameworks.
-    \item \textbf{Middleware \& Storage}: Deep expertise in Flink real-time computing, Kafka messaging, Redis caching, MySQL, DynamoDB, Thrift RPC, etc.
-    \item \textbf{Architecture \& DevOps}: Experienced in microservices architecture, high-concurrency system design, DDD domain modeling, state machine design; familiar with Docker, Kubernetes, Prometheus, Grafana.
-    \item \textbf{Real-time Computing \& High-Concurrency}: Deep expertise in Flink stream processing, skilled in designing distributed systems with 10k+ concurrency and sub-second latency, familiar with multi-level caching and rate limiting architectures.
-    \item \textbf{Complex Business System Design}: Extensive experience in trading, settlement, and risk control financial system design, skilled in complex business abstraction and state machine modeling, capable of independent 0-to-1 architecture design.
-    \item \textbf{Platform Infrastructure}: Built configurable, reusable rule engine and task scheduling platforms, enabling rapid business iteration, reducing task deployment cycle from days to hours.
+    \item \textbf{Languages}: Java (Primary), Python, SQL.
+    \item \textbf{Streaming \& Messaging}: Flink, Kafka.
+    \item \textbf{Storage}: Redis, MySQL, DynamoDB.
+    \item \textbf{Architecture}: Distributed systems, high-concurrency design, state machine modeling.
+    \item \textbf{DevOps}: Docker, Kubernetes, Prometheus.
 \end{itemize}
 
 \end{document}
