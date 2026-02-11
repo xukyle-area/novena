@@ -101,15 +101,15 @@ Bachelor of Engineering in Electronic Information Engineering
 \sectiontitle{Work Experience}
 
 \jobentry{Tiger Brokers · Crypto Exchange}{Senior Software Engineer}{May 2023 - Present}{Beijing}{
-Hong Kong licensed cryptocurrency exchange. Core contributor to market data, OTC trading, and real-time rule engine.
+Hong Kong licensed cryptocurrency exchange. Led and contributed to market data, OTC trading, and real-time rule engine.
 }
 
 \jobentry{Meituan · Hotel \& Travel Group}{Software Engineer}{May 2021 - Mar 2023}{Beijing}{
-Built merchant-level rate limiting with Redis and implemented signature verification with multi-level cache to improve throughput.
+Built merchant-level rate limiting with Redis and implemented signature verification with multi-level cache, improved throughput.
 }
 
-\jobentry{Xiaomi}{Software Engineer}{Oct 2019 - Apr 2021}{Beijing}{
-Contributed to retail management systems focusing on order and inventory modules and improved consistency.
+\jobentry{Xiaomi · Retail Group}{Software Engineer}{Oct 2019 - Apr 2021}{Beijing}{
+Built retail management system components, focused on order and inventory modules and improved transaction consistency.
 }
 
 % Core Project Experience
@@ -117,6 +117,7 @@ Contributed to retail management systems focusing on order and inventory modules
 
 \projectentry{Market Data Infrastructure \textit{@Tiger Brokers}}{Flink, Kafka, Redis, DynamoDB, WebSocket, MQTT, Thrift}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
+    \item \textbf{Background}: Built a unified market data platform integrating internal matching and external feeds for trading and risk control.
     \item \textbf{Market Data}: Consumed trade-level events from the matching engine and computed real-time candlestick data with Flink.
     \item \textbf{External Feed Integration}: Integrated external exchange feeds (e.g., Binance) for redundancy and price validation.
     \item \textbf{Tiered Architecture}: Designed MQTT real-time push (<50ms), Redis hot cache, and DynamoDB historical storage.
@@ -126,29 +127,31 @@ Contributed to retail management systems focusing on order and inventory modules
 
 \projectentry{Real-Time Rule Engine Platform \textit{@Tiger Brokers}}{Flink, Spring Boot, Kafka, Redis, MySQL, REST API}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
-    \item \textbf{Rule Engine}: Built a configurable Flink-based rule engine enabling hot rule deployment without service releases.
+    \item \textbf{Background}: Built a Flink-based rules platform to avoid code releases for rule changes across risk control and KYC.
+    \item \textbf{Rule Engine}: Built a configurable Flink-based rule engine that enabled hot rule deployment without service releases.
     \item \textbf{Job Lifecycle}: Implemented dynamic job lifecycle management with savepoint recovery and state persistence.
-    \item \textbf{Efficiency}: Reduced rule rollout time from 2 day to 1 hour.
+    \item \textbf{Efficiency}: Reduced rule rollout time from 2 days to 1 hour.
     \item \textbf{Adapter Framework}: Designed multi-source adapters (Kafka, MySQL, WebSocket) for extensible data integration.
 \end{itemize}
 }
 
 \projectentry{OTC Trading System \textit{@Tiger Brokers}}{Spring Boot, Redis, MySQL, XXL-Job, State Machine, Thrift, RateLimiter}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
-    \item \textbf{OTC Platform}: Designed OTC trading platform supporting fiat-crypto large-volume transactions.
+    \item \textbf{Background}: Built an OTC trading platform that supports exchanges between users and LPs (Liquidity Providers).
+    \item \textbf{OTC Platform}: Built OTC trading platform that supports fiat-crypto large-volume transactions.
     \item \textbf{Pricing}: Implemented proprietary order book aggregation across multiple LPs for optimal pricing.
-    \item \textbf{Order Lifecycle}: Modeled full order lifecycle using a state machine (Quote \textrightarrow Lock \textrightarrow Trade \textrightarrow Settlement).
-    \item \textbf{Settlement}: Optimized net settlement process, improving capital turnover by \textbf{70\%}.
+    \item \textbf{Order Lifecycle}: Designed full order lifecycle using a state machine (Quote, Trade, Settlement).
+    \item \textbf{Settlement}: Optimized net settlement process, improved capital turnover by \textbf{70\%}.
 \end{itemize}
 }
 
 \projectentry{Distributor Management System \textit{@Meituan}}{Spring, Redis, MySQL, XXL-Job, Thrift, State Machine, Guava Cache, MyBatis}{
 \begin{itemize}[leftmargin=0.8em, itemsep=1pt, parsep=0pt, topsep=0pt]
-    \item \textbf{Background}: Provided hotel and ticket distribution services across industries, managing full distributor lifecycle.
-    \item \textbf{Rate Limiting System}: Implemented merchant-level traffic limiting based on Redis + Guava Cache, preventing malicious requests and system overload.
-    \item \textbf{Signature Verification}: Redis for signature storage combined with Guava Cache for improved verification efficiency, QPS improved by \textbf{3x}.
-    \item \textbf{Lifecycle Management}: State Machine managing distributor status transitions from application to offline, preventing illegal state transitions.
-    \item \textbf{Rate Limiting}: Based on Redis, build a high-efficiency rate limiting algorithm to achieve multi-dimensional rate limiting.
+    \item \textbf{Background}: Built hotel and ticket distribution services across industries, managed full distributor lifecycle.
+    \item \textbf{Rate Limiting System}: Implemented traffic limiting based on Redis, prevented malicious requests and system overload.
+    \item \textbf{Signature Verification}: Built signature verification using Redis combined with Guava Cache for improved verification efficiency.
+    \item \textbf{Lifecycle Management}: Implemented State Machine that manages status transitions from application to offline, prevented illegal state transitions.
+    \item \textbf{Rate Limiting}: Built high-efficiency rate limiting algorithm using Redis to achieve multi-dimensional throttling.
 \end{itemize}
 }
 

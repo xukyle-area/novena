@@ -31,16 +31,16 @@ Hong Kong licensed cryptocurrency exchange. Core contributor to market data, OTC
 
 #### Real-Time Rule Engine Platform
 
-* Built configurable Flink-based rule engine enabling hot rule deployment without service release
+* Built configurable Flink-based rule engine that enables hot rule deployment without service release
 * Implemented dynamic job lifecycle management with savepoint recovery and state persistence
 * Reduced rule rollout time from 1 day to 1 hour
-* Designed multi-source adapter framework (Kafka, MySQL, WebSocket) for extensible data integration
+* Built multi-source adapter framework (Kafka, MySQL, WebSocket) for extensible data integration
 
 #### OTC Trading System
 
-* Designed OTC trading platform supporting fiat–crypto large-volume transactions
+* Built OTC trading platform that supports fiat–crypto large-volume transactions
 * Implemented proprietary order book aggregation across multiple LPs for optimal pricing
-* Modeled full order lifecycle using state machine (Quote → Lock → Trade → Settlement)
+* Designed full order lifecycle using state machine (Quote → Lock → Trade → Settlement)
 * Optimized net settlement process, improving capital turnover by 70%
 
 ---
@@ -49,9 +49,9 @@ Hong Kong licensed cryptocurrency exchange. Core contributor to market data, OTC
 
 **Software Engineer** | May 2021 – Mar 2023
 
-* Built merchant-level rate limiting system using Redis + Lua, improving system stability under high QPS
-* Implemented signature verification with multi-level cache (Guava + Redis), increasing throughput by 3×
-* Designed distributor lifecycle state machine to prevent invalid state transitions
+* Built merchant-level rate limiting system using Redis + Lua, improved system stability under high QPS
+* Implemented signature verification with multi-level cache (Guava + Redis), increased throughput by 3×
+* Built distributor lifecycle state machine to prevent invalid state transitions
 
 ---
 
@@ -59,7 +59,7 @@ Hong Kong licensed cryptocurrency exchange. Core contributor to market data, OTC
 
 **Software Engineer** | Oct 2019 – Apr 2021
 
-* Contributed to retail management system, focusing on order and inventory modules
+* Built retail management system components, focused on order and inventory modules
 * Optimized inventory synchronization and transaction consistency under high concurrency
 
 ---
