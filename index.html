@@ -27,6 +27,36 @@
             executeScript: true,
             plugins: [
                 function (hook, vm) {
+                    hook.init(function () {
+                        // 动态控制侧边栏显示
+                        function toggleSidebar() {
+                            const sidebar = document.querySelector('.sidebar');
+                            const content = document.querySelector('.content');
+                            const isHomePage = window.location.hash === '#/' || window.location.hash === '';
+
+                            if (sidebar && content) {
+                                if (isHomePage) {
+                                    // 首页：隐藏侧边栏，内容占满
+                                    sidebar.style.display = 'none';
+                                    content.style.left = '0';
+                                    content.style.maxWidth = 'none';
+                                    content.style.padding = '30px 15px 40px';
+                                } else {
+                                    // 子页面：显示侧边栏
+                                    sidebar.style.display = 'block';
+                                    content.style.left = '300px';
+                                    content.style.maxWidth = '800px';
+                                    content.style.padding = '30px 15px 40px 15px';
+                                }
+                            }
+                        }
+
+                        // 监听路由变化
+                        window.addEventListener('hashchange', toggleSidebar);
+                        // 初始加载时也执行一次
+                        setTimeout(toggleSidebar, 100);
+                    });
+
                     hook.beforeEach(function (html, next) {
                         // 如果不是首页，在内容顶部添加返回首页链接
                         if (vm.route.path !== '/') {
@@ -58,9 +88,32 @@
                                     color: #369870;
                                     text-decoration: underline;
                                 }
+                                /* 首页样式优化 */
+                                .content {
+                                    transition: left 0.25s ease-in-out;
+                                }
                             `;
                             document.head.appendChild(style);
                         }
+
+                        // 确保在页面加载完成后调整布局
+                        setTimeout(() => {
+                            const isHomePage = window.location.hash === '#/' || window.location.hash === '';
+                            const sidebar = document.querySelector('.sidebar');
+                            const content = document.querySelector('.content');
+
+                            if (sidebar && content) {
+                                if (isHomePage) {
+                                    sidebar.style.display = 'none';
+                                    content.style.left = '0';
+                                    content.style.maxWidth = 'none';
+                                } else {
+                                    sidebar.style.display = 'block';
+                                    content.style.left = '300px';
+                                    content.style.maxWidth = '800px';
+                                }
+                            }
+                        }, 50);
                     });
                 }
             ]
