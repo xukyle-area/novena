@@ -2,7 +2,7 @@
 
 系统化整理的技术知识库，涵盖项目经验总结、核心技术栈深度分析以及英文面试准备资料。
 
-> 📖 **在线阅读**：[https://你的用户名.github.io/novena](https://你的用户名.github.io/novena)
+> 📖 **在线阅读**：[https://kyleexu.github.io/novena](https://kyleexu.github.io/novena)
 
 ## 📁 项目结构
 
