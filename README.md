@@ -41,6 +41,9 @@
 - [01. 结构](repository/kafka/01.%20%E7%BB%93%E6%9E%84.md)
 - [02. 丢失、重复与有序](repository/kafka/02.%20%E4%B8%A2%E5%A4%B1%E3%80%81%E9%87%8D%E5%A4%8D%E4%B8%8E%E6%9C%89%E5%BA%8F.md)
 
+### mqtt
+- [简介](repository/mqtt/%E7%AE%80%E4%BB%8B.md)
+
 ### mysql
 - [01. 并发修改](repository/mysql/01.%20%E5%B9%B6%E5%8F%91%E4%BF%AE%E6%94%B9.md)
 - [02. 死锁](repository/mysql/02.%20%E6%AD%BB%E9%94%81.md)
@@ -77,7 +80,9 @@
 
 ### en
 - [resume](resume/en/resume.md)
-- [markdown-resume](resume/markdown-resume.md)
+
+### zh
+- [resume](resume/zh/resume.md)
 
 ---
 
