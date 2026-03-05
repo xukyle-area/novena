@@ -59,54 +59,10 @@
 
 ---
 
-## 🌍 英文面试准备
+## 🎯 岗位描述
 
-- [README](english/README.md)
-
-### java
-- [01. concurrent mark sweep](english/java/01.%20concurrent%20mark%20sweep.md)
-- [02. G1](english/java/02.%20G1.md)
-- [03. hashmap](english/java/03.%20hashmap.md)
-- [04. concurrenthashmap](english/java/04.%20concurrenthashmap.md)
-- [05. lock & synchornized](english/java/05.%20lock%20%26%20synchornized.md)
-
-### market
-- [01-system-architecture](english/market/01-system-architecture.md)
-- [02-mqtt-vs-websocket](english/market/02-mqtt-vs-websocket.md)
-- [03-parallel-vs-serial](english/market/03-parallel-vs-serial.md)
-- [04-technical-points](english/market/04-technical-points.md)
-- [05-price-deviation-controls](english/market/05-price-deviation-controls.md)
-- [05-price-deviation-handling](english/market/05-price-deviation-handling.md)
-- [06-latency-analysis](english/market/06-latency-analysis.md)
-
-### rule-engine
-- [01. summary](english/rule-engine/01.%20summary.md)
-- [self-introduction](english/self-introduction.md)
-
-### vocabulary
-- [alpha](english/vocabulary/alpha.md)
-- [statement-template](english/vocabulary/statement-template.md)
-
-### subject
-- [01-basic-computer-vocabulary](english/vocabulary/subject/01-basic-computer-vocabulary.md)
-- [02-programming-language-core](english/vocabulary/subject/02-programming-language-core.md)
-- [03-data-structures-algorithms](english/vocabulary/subject/03-data-structures-algorithms.md)
-- [04-operating-system-network](english/vocabulary/subject/04-operating-system-network.md)
-- [05-database](english/vocabulary/subject/05-database.md)
-- [06-distributed-systems](english/vocabulary/subject/06-distributed-systems.md)
-- [07-microservices](english/vocabulary/subject/07-microservices.md)
-- [08-message-queue](english/vocabulary/subject/08-message-queue.md)
-- [09-caching](english/vocabulary/subject/09-caching.md)
-- [10-concurrency-multithreading](english/vocabulary/subject/10-concurrency-multithreading.md)
-- [11-java-ecosystem](english/vocabulary/subject/11-java-ecosystem.md)
-- [12-spring-framework](english/vocabulary/subject/12-spring-framework.md)
-- [13-system-design](english/vocabulary/subject/13-system-design.md)
-- [14-performance-optimization](english/vocabulary/subject/14-performance-optimization.md)
-- [15-devops-deployment](english/vocabulary/subject/15-devops-deployment.md)
-- [16-software-engineering-practices](english/vocabulary/subject/16-software-engineering-practices.md)
-- [17-testing](english/vocabulary/subject/17-testing.md)
-- [18-security](english/vocabulary/subject/18-security.md)
-- [19-interview-expressions](english/vocabulary/subject/19-interview-expressions.md)
+- [bybit](jobs/bybit.md)
+- [futu](jobs/futu.md)
 
 ---
 

@@ -53,9 +53,10 @@ def generate_readme():
     directories = [
         ("project", "🚀 项目经验"),
         ("repository", "📚 技术知识库"), 
-        ("english", "🌍 英文面试准备"),
+        # ("english", "🌍 英文面试准备"),
+        ("jobs", "🎯 岗位描述"),
         ("interview", "📄 面试总结"),
-        ("resume", "📝 个人简历")
+        ("resume", "📝 个人简历"),
     ]
     
     for dir_name, title in directories:
