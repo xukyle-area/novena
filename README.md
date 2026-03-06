@@ -16,6 +16,7 @@
 - [04. 价格偏差处理](project/market/04.%20%E4%BB%B7%E6%A0%BC%E5%81%8F%E5%B7%AE%E5%A4%84%E7%90%86.md)
 - [05. K 线补偿](project/market/05.%20K%20%E7%BA%BF%E8%A1%A5%E5%81%BF.md)
 - [06. MQTT 耗时分析](project/market/06.%20MQTT%20%E8%80%97%E6%97%B6%E5%88%86%E6%9E%90.md)
+- [07. MQTT 推送结构优化](project/market/07.%20MQTT%20%E6%8E%A8%E9%80%81%E7%BB%93%E6%9E%84%E4%BC%98%E5%8C%96.md)
 
 ### otc
 - [01. 订单状态](project/otc/01.%20%E8%AE%A2%E5%8D%95%E7%8A%B6%E6%80%81.md)
