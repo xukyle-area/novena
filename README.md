@@ -49,6 +49,7 @@
 - [01. 并发修改](repository/mysql/01.%20%E5%B9%B6%E5%8F%91%E4%BF%AE%E6%94%B9.md)
 - [02. 死锁](repository/mysql/02.%20%E6%AD%BB%E9%94%81.md)
 - [03. mvcc](repository/mysql/03.%20mvcc.md)
+- [04. for update](repository/mysql/04.%20for%20update.md)
 
 ### others
 - [01. nonce 与时间戳](repository/others/01.%20nonce%20%E4%B8%8E%E6%97%B6%E9%97%B4%E6%88%B3.md)
