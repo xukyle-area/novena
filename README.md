@@ -20,7 +20,6 @@
 
 ### otc
 - [01. 订单状态](project/otc/01.%20%E8%AE%A2%E5%8D%95%E7%8A%B6%E6%80%81.md)
-- [02. OTC 结算](project/otc/02.%20OTC%20%E7%BB%93%E7%AE%97.md)
 
 ### rate-limit
 - [01. 概况](project/rate-limit/01.%20%E6%A6%82%E5%86%B5.md)
