@@ -57,6 +57,7 @@
 - [03. 事件驱动](repository/others/03.%20%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8.md)
 - [04. 高性能的架构](repository/others/04.%20%E9%AB%98%E6%80%A7%E8%83%BD%E7%9A%84%E6%9E%B6%E6%9E%84.md)
 - [05. 零拷贝](repository/others/05.%20%E9%9B%B6%E6%8B%B7%E8%B4%9D.md)
+- [06. questions](repository/others/06.%20questions.md)
 
 ### redis
 - [01. 数据结构](repository/redis/01.%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.md)
