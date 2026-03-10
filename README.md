@@ -57,6 +57,7 @@
 - [04. 高性能的架构](repository/others/04.%20%E9%AB%98%E6%80%A7%E8%83%BD%E7%9A%84%E6%9E%B6%E6%9E%84.md)
 - [05. 零拷贝](repository/others/05.%20%E9%9B%B6%E6%8B%B7%E8%B4%9D.md)
 - [06. questions](repository/others/06.%20questions.md)
+- [07. 超卖](repository/others/07.%20%E8%B6%85%E5%8D%96.md)
 
 ### redis
 - [01. 数据结构](repository/redis/01.%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.md)
