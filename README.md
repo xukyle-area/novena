@@ -62,6 +62,7 @@
 ### redis
 - [01. 数据结构](repository/redis/01.%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.md)
 - [02. 分布式锁](repository/redis/02.%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81.md)
+- [03. Zset 底层结构](repository/redis/03.%20Zset%20%E5%BA%95%E5%B1%82%E7%BB%93%E6%9E%84.md)
 
 ---
 
