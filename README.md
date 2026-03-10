@@ -37,6 +37,9 @@
 ### flink
 - [01. flink-architecture](repository/flink/01.%20flink-architecture.md)
 
+### java
+- [01. 垃圾回收器](repository/java/01.%20%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8.md)
+
 ### kafka
 - [01. 结构](repository/kafka/01.%20%E7%BB%93%E6%9E%84.md)
 - [02. 丢失、重复与有序](repository/kafka/02.%20%E4%B8%A2%E5%A4%B1%E3%80%81%E9%87%8D%E5%A4%8D%E4%B8%8E%E6%9C%89%E5%BA%8F.md)
